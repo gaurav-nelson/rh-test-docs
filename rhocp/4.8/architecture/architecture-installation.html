@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Installation and update :: Red Hat Docs</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Red Hat Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhocp" data-version="4.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat Openshift Container Platform</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">About</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Welcome</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../learn_more_about_openshift.html">Learn more about OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../oke_about.html">About OpenShift Kubernetes Engine</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../legal-notice.html">Legal notice</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../release_notes/ocp-4-8-release-notes.html">OpenShift Container Platform 4.8 release notes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../release_notes/versioning-policy.html">Versioning policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architectue</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture.html">Product architecture</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="architecture-installation.html">Installation and update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="control-plane.html">The control plane</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="understanding-development.html">Understand OpenShift development</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture-rhcos.html">Red Hat Enterprise Linux CoreOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admission-plug-ins.html">Admission plug-ins</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Openshift Container Platform</span>
+    <span class="version">4.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat Openshift Container Platform</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">4.8</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat Openshift Container Platform</a></li>
+    <li>Architectue</li>
+    <li><a href="architecture-installation.html">Installation and update</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/ganelson/Documents/alt/openshift-docs/modules/architecture/pages/architecture-installation.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Installation and update</h1>
+<div class="sect1">
+<h2 id="installation-overview_architecture-installation"><a class="anchor" href="#installation-overview_architecture-installation"></a>OpenShift Container Platform installation overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The OpenShift Container Platform installation program offers you flexibility. You can use the installation program to deploy a cluster on infrastructure that the installation program provisions and the cluster maintains or deploy a cluster on infrastructure that you prepare and maintain.</p>
+</div>
+<div class="paragraph">
+<p>These two basic types of OpenShift Container Platform clusters are frequently called installer-provisioned infrastructure clusters and user-provisioned infrastructure clusters.</p>
+</div>
+<div class="paragraph">
+<p>Both types of clusters have the following characteristics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Highly available infrastructure with no single points of failure is available by default</p>
+</li>
+<li>
+<p>Administrators maintain control over what updates are applied and when</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You use the same installation program to deploy both types of clusters. The main assets generated by the installation program are the Ignition config files for the bootstrap, master, and worker machines. With these three configurations and correctly configured infrastructure, you can start an OpenShift Container Platform cluster.</p>
+</div>
+<div class="paragraph">
+<p>The OpenShift Container Platform installation program uses a set of targets and dependencies to manage cluster installation. The installation program has a set of targets that it must achieve, and each target has a set of dependencies. Because each target is only concerned with its own dependencies, the installation program can act to achieve multiple targets in parallel. The ultimate target is a running cluster. By meeting dependencies instead of running commands, the installation program is able to recognize and use existing components instead of running the commands to create them again.</p>
+</div>
+<div class="paragraph">
+<p>The following diagram shows a subset of the installation targets and dependencies:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/targets-and-dependencies.png" alt="OpenShift Container Platform installation targets and dependencies">
+</div>
+<div class="title">Figure 1. OpenShift Container Platform installation targets and dependencies</div>
+</div>
+<div class="paragraph">
+<p>After installation, each cluster machine uses Red Hat Enterprise Linux CoreOS (RHCOS) as the operating system. RHCOS is the immutable container host version of Red Hat Enterprise Linux (RHEL) and features a RHEL kernel with SELinux enabled by default. It includes the <code>kubelet</code>, which is the Kubernetes node agent, and the CRI-O container runtime, which is optimized for Kubernetes.</p>
+</div>
+<div class="paragraph">
+<p>Every control plane machine in an OpenShift Container Platform 4.8 cluster must use RHCOS, which includes a critical first-boot provisioning tool called Ignition. This tool enables the cluster to configure the machines. Operating system updates are delivered as an Atomic OSTree repository that is embedded in a container image that is rolled out across the cluster by an Operator. Actual operating system changes are made in-place on each machine as an atomic operation by using rpm-ostree. Together, these technologies enable OpenShift Container Platform to manage the operating system like it manages any other application on the cluster, via in-place upgrades that keep the entire platform up-to-date. These in-place updates can reduce the burden on operations teams.</p>
+</div>
+<div class="paragraph">
+<p>If you use RHCOS as the operating system for all cluster machines, the cluster manages all aspects of its components and machines, including the operating system. Because of this, only the installation program and the Machine Config Operator can change machines. The installation program uses Ignition config files to set the exact state of each machine, and the Machine Config Operator completes more changes to the machines, such as the application of new certificates or keys, after installation.</p>
+</div>
+<div class="sect2">
+<h3 id="supported-platforms-for-openshift-clusters_architecture-installation"><a class="anchor" href="#supported-platforms-for-openshift-clusters_architecture-installation"></a>Supported platforms for OpenShift Container Platform clusters</h3>
+<div class="paragraph">
+<p>In OpenShift Container Platform 4.8, you can install a cluster that uses installer-provisioned infrastructure on the following platforms:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon Web Services (AWS)</p>
+</li>
+<li>
+<p>Google Cloud Platform (GCP)</p>
+</li>
+<li>
+<p>Microsoft Azure</p>
+</li>
+<li>
+<p>Red Hat OpenStack Platform (RHOSP) version 13 and 16</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The latest OpenShift Container Platform release supports both the latest RHOSP long-life release and intermediate release. For complete RHOSP release compatibility, see the <a href="https://access.redhat.com/articles/4679401">OpenShift Container Platform on RHOSP support matrix</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Red Hat Virtualization (RHV)</p>
+</li>
+<li>
+<p>VMware vSphere</p>
+</li>
+<li>
+<p>VMware Cloud (VMC) on AWS</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For these clusters, all machines, including the computer that you run the installation process on, must have direct internet access to pull images for platform containers and provide telemetry data to Red Hat.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After installation, the following changes are not supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Mixing cloud provider platforms</p>
+</li>
+<li>
+<p>Mixing cloud provider components, such as using a persistent storage framework from a differing platform than what the cluster is installed on</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In OpenShift Container Platform 4.8, you can install a cluster that uses user-provisioned infrastructure on the following platforms:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS</p>
+</li>
+<li>
+<p>Azure</p>
+</li>
+<li>
+<p>GCP</p>
+</li>
+<li>
+<p>RHOSP</p>
+</li>
+<li>
+<p>RHV</p>
+</li>
+<li>
+<p>VMware vSphere</p>
+</li>
+<li>
+<p>VMware Cloud on AWS</p>
+</li>
+<li>
+<p>Bare metal</p>
+</li>
+<li>
+<p>IBM Z or LinuxONE</p>
+</li>
+<li>
+<p>IBM Power Systems</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With installations on user-provisioned infrastructure, each machine can have full internet access, you can place your cluster behind a proxy, or you can perform a <em>restricted network installation</em>. In a restricted network installation, you can download the images that are required to install a cluster, place them in a mirror registry, and use that data to install your cluster. While you require internet access to pull images for platform containers, with a restricted network installation on vSphere or bare metal infrastructure, your cluster machines do not require direct internet access.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://access.redhat.com/articles/4128421">OpenShift Container Platform 4.x Tested Integrations</a> page contains details about integration testing for different platforms.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="installation-process_architecture-installation"><a class="anchor" href="#installation-process_architecture-installation"></a>Installation process</h3>
+<div class="paragraph">
+<p>When you install an OpenShift Container Platform cluster, you download the installation program from
+the appropriate <a href="https://cloud.redhat.com/openshift/install">Infrastructure Provider</a> page on the Red Hat OpenShift Cluster Manager site. This site manages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>REST API for accounts</p>
+</li>
+<li>
+<p>Registry tokens, which are the pull secrets that you use to obtain the required components</p>
+</li>
+<li>
+<p>Cluster registration, which associates the cluster identity to your Red Hat account to facilitate the gathering of usage metrics</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In OpenShift Container Platform 4.8, the installation program is a Go binary file that performs a series of file transformations on a set of assets. The way you interact with the installation program differs depending on your installation type.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For clusters with installer-provisioned infrastructure, you delegate the infrastructure bootstrapping and provisioning to the installation program instead of doing it yourself. The installation program creates all of the networking, machines, and operating systems that are required to support the cluster.</p>
+</li>
+<li>
+<p>If you provision and manage the infrastructure for your cluster, you must provide all of the cluster infrastructure and resources, including the bootstrap machine, networking, load balancing, storage, and individual cluster machines.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You use three sets of files during installation: an installation configuration file that is named <code>install-config.yaml</code>, Kubernetes manifests, and Ignition config files for your machine types.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is possible to modify Kubernetes and the Ignition config files that control the underlying RHCOS operating system during installation. However, no validation is available to confirm the suitability of any modifications that you make to these objects. If you modify these objects, you might render your cluster non-functional. Because of this risk, modifying Kubernetes and Ignition config files is not supported unless you are following documented procedures or are instructed to do so by Red Hat support.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The installation configuration file is transformed into Kubernetes manifests, and then the manifests are wrapped into Ignition config files. The installation program uses these Ignition config files to create the cluster.</p>
+</div>
+<div class="paragraph">
+<p>The installation configuration files are all pruned when you run the installation program, so be sure to back up all configuration files that you want to use again.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You cannot modify the parameters that you set during installation, but you can modify many cluster attributes after installation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<h4 id="_the_installation_process_with_installer_provisioned_infrastructure" class="discrete">The installation process with installer-provisioned infrastructure</h4>
+<div class="paragraph">
+<p>The default installation type uses installer-provisioned infrastructure. By default, the installation program acts as an installation wizard, prompting you for values that it cannot determine on its own and providing reasonable default values for the remaining parameters. You can also customize the installation process to support advanced infrastructure scenarios. The installation program provisions the underlying infrastructure for the cluster.</p>
+</div>
+<div class="paragraph">
+<p>You can install either a standard cluster or a customized cluster. With a standard cluster, you provide minimum details that are required to install the cluster. With a customized cluster, you can specify more details about the platform, such as the number of machines that the control plane uses, the type of virtual machine that the cluster deploys, or the CIDR range for the Kubernetes service network.</p>
+</div>
+<div class="paragraph">
+<p>If possible, use this feature to avoid having to provision and maintain the cluster infrastructure. In all other environments, you use the installation program to generate the assets that you require to provision your cluster infrastructure.</p>
+</div>
+<div class="paragraph">
+<p>With installer-provisioned infrastructure clusters, OpenShift Container Platform manages all aspects of the cluster, including the operating system itself. Each machine boots with a configuration that references resources hosted in the cluster that it joins. This configuration allows the cluster to manage itself as updates are applied.</p>
+</div>
+<h4 id="_the_installation_process_with_user_provisioned_infrastructure" class="discrete">The installation process with user-provisioned infrastructure</h4>
+<div class="paragraph">
+<p>You can also install OpenShift Container Platform on infrastructure that you provide. You use the installation program to generate the assets that you require to provision the cluster infrastructure, create the cluster infrastructure, and then deploy the cluster to the infrastructure that you provided.</p>
+</div>
+<div class="paragraph">
+<p>If you do not use infrastructure that the installation program provisioned, you must manage and maintain the cluster resources yourself, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The underlying infrastructure for the control plane and compute machines that make up the cluster</p>
+</li>
+<li>
+<p>Load balancers</p>
+</li>
+<li>
+<p>Cluster networking, including the DNS records and required subnets</p>
+</li>
+<li>
+<p>Storage for the cluster infrastructure and applications</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If your cluster uses user-provisioned infrastructure, you have the option of adding RHEL worker machines to your cluster.</p>
+</div>
+<h4 id="_installation_process_details" class="discrete">Installation process details</h4>
+<div class="paragraph">
+<p>Because each machine in the cluster requires information about the cluster when it is provisioned, OpenShift Container Platform uses a temporary <em>bootstrap</em> machine during initial configuration to provide the required information to the permanent control plane. It boots by using an Ignition config file that describes how to create the cluster. The bootstrap machine creates the control plane machines (also known as the master machines) that make up the control plane. The control plane machines then create the compute machines, which are also known as worker machines. The following figure illustrates this process:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/create-nodes.png" alt="Creating bootstrap" width="master" height="and worker machines">
+</div>
+<div class="title">Figure 2. Creating the bootstrap, master, and worker machines</div>
+</div>
+<div class="paragraph">
+<p>After the cluster machines initialize, the bootstrap machine is destroyed. All clusters use the bootstrap process to initialize the cluster, but if you provision the infrastructure for your cluster, you must complete many of the steps manually.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Ignition config files that the installation program generates contain certificates that expire after 24 hours, which are then renewed at that time. If the cluster is shut down before renewing the certificates and the cluster is later restarted after the 24 hours have elapsed, the cluster automatically recovers the expired certificates. The exception is that you must manually approve the pending <code>node-bootstrapper</code> certificate signing requests (CSRs) to recover kubelet certificates. See the documentation for <em>Recovering from expired control plane certificates</em> for more information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Bootstrapping a cluster involves the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The bootstrap machine boots and starts hosting the remote resources required for the control plane machines to boot. (Requires manual intervention if you provision the infrastructure)</p>
+</li>
+<li>
+<p>The bootstrap machine starts a single-node etcd cluster and a temporary Kubernetes control plane.</p>
+</li>
+<li>
+<p>The control plane machines fetch the remote resources from the bootstrap machine and finish booting. (Requires manual intervention if you provision the infrastructure)</p>
+</li>
+<li>
+<p>The temporary control plane schedules the production control plane to the production control plane machines.</p>
+</li>
+<li>
+<p>The Cluster Version Operator (CVO) comes online and installs the etcd Operator. The etcd Operator scales up etcd on all control plane nodes.</p>
+</li>
+<li>
+<p>The temporary control plane shuts down and passes control to the production control plane.</p>
+</li>
+<li>
+<p>The bootstrap machine injects OpenShift Container Platform components into the production control plane.</p>
+</li>
+<li>
+<p>The installation program shuts down the bootstrap machine. (Requires manual intervention if you provision the infrastructure)</p>
+</li>
+<li>
+<p>The control plane sets up the worker nodes.</p>
+</li>
+<li>
+<p>The control plane installs additional services in the form of a set of Operators.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The result of this bootstrapping process is a fully running OpenShift Container Platform cluster. The cluster then downloads and configures remaining components needed for the day-to-day operation, including the creation of worker machines in supported environments.</p>
+</div>
+<h3 id="_installation_scope" class="discrete">Installation scope</h3>
+<div class="paragraph">
+<p>The scope of the OpenShift Container Platform installation program is intentionally narrow. It is designed for simplicity and ensured success. You can complete many more configuration tasks after installation completes.</p>
+</div>
+<div class="ulist">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>See <a href="#../post_installation_configuration/cluster-tasks.adoc#available_cluster_customizations" class="page unresolved">Available cluster customizations</a> for details about OpenShift Container Platform configuration resources.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="update-service-overview_architecture-installation"><a class="anchor" href="#update-service-overview_architecture-installation"></a>About the OpenShift Update Service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The OpenShift Update Service (OSUS) provides over-the-air updates to OpenShift Container Platform, including Red Hat Enterprise Linux CoreOS (RHCOS). It provides a graph, or diagram, that contains the <em>vertices</em> of component Operators and the <em>edges</em> that connect them. The edges in the graph show which versions you can safely update to. The vertices are update payloads that specify the intended state of the managed cluster components.</p>
+</div>
+<div class="paragraph">
+<p>The Cluster Version Operator (CVO) in your cluster checks with the OpenShift Update Service to see the valid updates and update paths based on current component versions and information in the graph. When you request an update, the CVO uses the release image for that update to upgrade your cluster. The release artifacts are hosted in Quay as container images.</p>
+</div>
+<div class="paragraph">
+<p>To allow the OpenShift Update Service to provide only compatible updates, a release verification pipeline drives automation. Each release artifact is verified for compatibility with supported cloud platforms and system architectures, as well as other component packages. After the pipeline confirms the suitability of a release, the OpenShift Update Service notifies you that it is available.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The OpenShift Update Service displays all valid updates. Do not force an update to a version that the OpenShift Update Service does not display.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Two controllers run during continuous update mode. The first controller continuously updates the payload manifests, applies the manifests to the cluster, and outputs the controlled rollout status of the Operators to indicate whether they are available, upgrading, or failed. The second controller polls the OpenShift Update Service to determine if updates are available.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only upgrading to a newer version is supported. Reverting or rolling back your cluster to a previous version is not supported. If your upgrade fails, contact Red Hat support.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>During the upgrade process, the Machine Config Operator (MCO) applies the new configuration to your cluster machines. The MCO cordons the number of nodes as specified by the <code>maxUnavailable</code> field on the machine configuration pool and marks them as unavailable. By default, this value is set to <code>1</code>. The MCO then applies the new configuration and reboots the machine.</p>
+</div>
+<div class="paragraph">
+<p>If you use Red Hat Enterprise Linux (RHEL) machines as workers, the MCO does not update the kubelet because you must update the OpenShift API on the machines first.</p>
+</div>
+<div class="paragraph">
+<p>With the specification for the new version applied to the old kubelet, the RHEL machine cannot return to the <code>Ready</code> state. You cannot complete the update until the machines are available. However, the maximum number of unavailable nodes is set to ensure that normal cluster operations can continue with that number of machines out of service.</p>
+</div>
+<div class="paragraph">
+<p>The OpenShift Update Service is composed of an Operator and one or more application instances.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="unmanaged-operators_architecture-installation"><a class="anchor" href="#unmanaged-operators_architecture-installation"></a>Support policy for unmanaged Operators</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <em>management state</em> of an Operator determines whether an Operator is actively
+managing the resources for its related component in the cluster as designed. If
+an Operator is set to an <em>unmanaged</em> state, it does not respond to changes in
+configuration nor does it receive updates.</p>
+</div>
+<div class="paragraph">
+<p>While this can be helpful in non-production clusters or during debugging,
+Operators in an unmanaged state are unsupported and the cluster administrator
+assumes full control of the individual component configurations and upgrades.</p>
+</div>
+<div class="paragraph">
+<p>An Operator can be set to an unmanaged state using the following methods:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Individual Operator configuration</strong></p>
+<div class="paragraph">
+<p>Individual Operators have a <code>managementState</code> parameter in their configuration.
+This can be accessed in different ways, depending on the Operator. For example,
+the Red Hat OpenShift Logging Operator accomplishes this by modifying a custom resource
+(CR) that it manages, while the Cluster Samples Operator uses a cluster-wide
+configuration resource.</p>
+</div>
+<div class="paragraph">
+<p>Changing the <code>managementState</code> parameter to <code>Unmanaged</code> means that the Operator
+is not actively managing its resources and will take no action related to the
+related component. Some Operators might not support this management state as it
+might damage the cluster and require manual recovery.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Changing individual Operators to the <code>Unmanaged</code> state renders that particular
+component and functionality unsupported. Reported issues must be reproduced in
+<code>Managed</code> state for support to proceed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><strong>Cluster Version Operator (CVO) overrides</strong></p>
+<div class="paragraph">
+<p>The <code>spec.overrides</code> parameter can be added to the CVO&#8217;s configuration to allow
+administrators to provide a list of overrides to the CVO&#8217;s behavior for a
+component. Setting the <code>spec.overrides[].unmanaged</code> parameter to <code>true</code> for a
+component blocks cluster upgrades and alerts the administrator after a CVO
+override has been set:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-terminal hljs" data-lang="terminal">Disabling ownership via cluster version overrides prevents upgrades. Please remove overrides before continuing.</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Setting a CVO override puts the entire cluster in an unsupported state. Reported
+issues must be reproduced after removing any overrides for support to proceed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="architecture-installation-next-steps"><a class="anchor" href="#architecture-installation-next-steps"></a>Next steps</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#../installing/installing-preparing.adoc#installing-preparing" class="page unresolved">Selecting a cluster installation method and preparing it for users</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

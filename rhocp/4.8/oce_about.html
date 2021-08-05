@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>About OpenShift Container Engine :: Red Hat Docs</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Red Hat Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhocp" data-version="4.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Red Hat Openshift Container Platform</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">About</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html">Welcome</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="learn_more_about_openshift.html">Learn more about OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="oke_about.html">About OpenShift Kubernetes Engine</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="legal-notice.html">Legal notice</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="release_notes/ocp-4-8-release-notes.html">OpenShift Container Platform 4.8 release notes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="release_notes/versioning-policy.html">Versioning policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architectue</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture/architecture.html">Product architecture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture/architecture-installation.html">Installation and update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture/control-plane.html">The control plane</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture/understanding-development.html">Understand OpenShift development</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture/architecture-rhcos.html">Red Hat Enterprise Linux CoreOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture/admission-plug-ins.html">Admission plug-ins</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Openshift Container Platform</span>
+    <span class="version">4.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">Red Hat Openshift Container Platform</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">4.8</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Red Hat Openshift Container Platform</a></li>
+    <li><a href="oce_about.html">About OpenShift Container Engine</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/ganelson/Documents/alt/openshift-docs/modules/ROOT/pages/oce_about.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">About OpenShift Container Engine</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>:toc-title:a</p>
+</div>
+<div class="paragraph">
+<p>Red Hat OpenShift Container Engine is a new product offering from Red Hat
+that lets you use {product-title} as a production platform for launching
+containers. You download and install OpenShift Container Engine in the same way as {product-title},
+but OpenShift Container Engine offers a subset of the features that {product-title} does.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="about_oce_similarities_and_differences"><a class="anchor" href="#about_oce_similarities_and_differences"></a>Similarities and differences</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can see the similarities and differences between OpenShift Container Engine
+and {product-title} in the following table:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Product comparison for OpenShift Container Engine and {product-title}</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"></th>
+<th class="tableblock halign-left valign-top">OpenShift Container Engine</th>
+<th class="tableblock halign-left valign-top">{product-title}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Core Kubernetes and container orchestration</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Enterprise-ready configurations</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Standard infrastructure services</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Core user experience</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Maintained and curated content</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">OpenShift Container Storage compatible</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Red Hat Middleware compatible</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Serverless Cloud Functions compatible</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Quay integration compatible</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">OpenShift Virtualization for virtual machines compatible</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Advanced cluster management</p></th>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Advanced networking</p></th>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Developer experience</p></th>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="about_oce_core_kubernetes_and_container_orchestration"><a class="anchor" href="#about_oce_core_kubernetes_and_container_orchestration"></a>Core Kubernetes and container orchestration</h3>
+<div class="paragraph">
+<p>OpenShift Container Engine offers full access to an enterprise-ready Kubernetes environment that is
+easy to install and offers an extensive compatibility test matrix with many of
+the software elements that you might use in your data center.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift Container Engine offers the same service level agreements, bug fixes, and common
+vulnerabilities and errors protection as {product-title}. OpenShift Container Engine includes a
+Red Hat Enterprise Linux Virtual Datacenter and Red Hat CoreOS entitlement that
+allows you to use an integrated Linux operating system with container runtime
+from the same provider.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift Container Engine is compatible with Windows Containers from Microsoft.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="about_oce_enterprise_ready_configurations"><a class="anchor" href="#about_oce_enterprise_ready_configurations"></a>Enterprise-ready configurations</h3>
+<div class="paragraph">
+<p>OpenShift Container Engine uses the same security options and default settings as the {product-title}.
+Default security context constraints, pod security policies, best practice
+network and storage settings, service account configuration, SELinux integration,
+HAproxy edge routing configuration, and all other standard protections that
+{product-title} offers are available in OpenShift Container Engine. OpenShift Container Engine offers full access to the
+integrated monitoring solution that {product-title} uses, which is based on
+Prometheus and offers deep coverage and alerting for common Kubernetes issues.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift Container Engine uses the same installation and upgrade automation as {product-title}.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="about_oce_standard_infrastructure_services"><a class="anchor" href="#about_oce_standard_infrastructure_services"></a>Standard infrastructure services</h3>
+<div class="paragraph">
+<p>With an OpenShift Container Engine subscription, you receive support for all storage plug-ins that
+{product-title} supports.</p>
+</div>
+<div class="paragraph">
+<p>In terms of networking, OpenShift Container Engine offers full and
+supported access to the Kubernetes Container Network Interface (CNI) and
+therefore allows you to use any third-party SDN that supports {product-title}.
+It also allows you to use the included Open vSwitch to establish a flat,
+non-project (Kubernetes namespace) segmented network for the Kubernetes cluster.
+OpenShift Container Engine allows customers to use a Kubernetes Network Policy to create
+microsegmentation between deployed application services on the cluster.</p>
+</div>
+<div class="paragraph">
+<p>You can also use the route API objects that are found in {product-title},
+including its sophisticated integration with the HAproxy edge routing layer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="about_oce_core_user_experience"><a class="anchor" href="#about_oce_core_user_experience"></a>Core user experience</h3>
+<div class="paragraph">
+<p>OpenShift Container Engine users have full access to Kubernetes Operators, pod deployment strategies,
+Helm, and {product-title} templates. OpenShift Container Engine users can use both the <code>oc</code> and
+<code>kubectl</code> command line interfaces. OpenShift Container Engine also offers an administrator web-based
+console that shows all aspects of the deployed container services and offers a
+container-as-a service experience. OpenShift Container Engine grants access to the Operator Life
+Cycle Manager that helps you control access to content on the cluster and life
+cycle operator-enabled services that you use. With an OpenShift Container Engine subscription, you
+receive access to the Kubernetes namespace, the OpenShift Project API object,
+and both cluster-level and tenant-level Prometheus monitoring metrics and events.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_maintained_and_curated_content"><a class="anchor" href="#_maintained_and_curated_content"></a>Maintained and curated content</h3>
+<div class="paragraph">
+<p>With an OpenShift Container Engine subscription, you receive access to the {product-title} entitled
+content from the Red Hat Ecosystem Catalog and Red Hat Connect ISV marketplace.
+You can access all maintained and curated content that the {product-title}
+eco-system offers either for free, such as the Red Hat Software Collections,
+or through additional purchases. The Kubernetes service broker, service catalog,
+and all {product-title} service broker offerings are supported with an
+OpenShift Container Engine subscription.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_openshift_container_storage_compatible"><a class="anchor" href="#_openshift_container_storage_compatible"></a>OpenShift Container Storage compatible</h3>
+<div class="paragraph">
+<p>OpenShift Container Engine is compatible and supported with OpenShift Container Storage.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_red_hat_middleware_compatible"><a class="anchor" href="#_red_hat_middleware_compatible"></a>Red Hat Middleware compatible</h3>
+<div class="paragraph">
+<p>OpenShift Container Engine is compatible and supported with Red Hat Middleware product solutions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_serverless_cloud_functions_compatible"><a class="anchor" href="#_serverless_cloud_functions_compatible"></a>Serverless Cloud Functions compatible</h3>
+<div class="paragraph">
+<p>OpenShift Container Engine is compatible and supported with future Red Hat Cloud Functions products,
+such as function based and serverless container services.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quay_integration_compatible"><a class="anchor" href="#_quay_integration_compatible"></a>Quay Integration compatible</h3>
+<div class="paragraph">
+<p>OpenShift Container Engine is compatible and supported with Red Hat Quay.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_openshift_virtualization_compatible"><a class="anchor" href="#_openshift_virtualization_compatible"></a>OpenShift virtualization compatible</h3>
+<div class="paragraph">
+<p>OpenShift Container Engine is compatible and supported with Red Hat product offerings derived from
+the kubevirt.io open source project.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_advanced_cluster_management"><a class="anchor" href="#_advanced_cluster_management"></a>Advanced cluster management</h3>
+<div class="paragraph">
+<p>A OpenShift Container Engine subscription does not offer a cluster-wide log aggregation
+solution or support Elasticsearch, Fluentd, Kibana based logging solutions.
+Similarly the chargeback features found in {product-title} and Red Hat Service
+Mesh capabilities derived from the open source Istio.io and kiali.io projects
+that offers OpenTracing observability for containerized services on
+{product-title} are not supported.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_advanced_networking"><a class="anchor" href="#_advanced_networking"></a>Advanced networking</h3>
+<div class="paragraph">
+<p>The standard networking solutions in {product-title} are not supported with an
+OpenShift Container Engine subscription. {product-title}'s Kubernetes CNI plug-in for automation of
+multi-tenant network segmentation between {product-title} projects is not
+entitled for use with OpenShift Container Engine. {product-title} offers more granular control of the
+source IP addresses that are used by application services on the cluster.
+Those egress IP address controls are not entitled for use with OpenShift Container Engine.
+{product-title} offers ingress routing to on cluster services that use
+non-standard ports when no public cloud provider is in use via the VIP pods
+found in {product-title}. That ingress solution is not supported in OpenShift Container Engine.
+OpenShift Container Engine users are supported for the Kubernetes ingress control object, which
+offers integrations with public cloud providers. Red Hat Service Mesh, which is
+derived from the istio.io open source project, is not supported in OpenShift Container Engine.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_developer_experience"><a class="anchor" href="#_developer_experience"></a>Developer experience</h3>
+<div class="paragraph">
+<p>With OpenShift Container Engine, the following capabilities are not supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The developer experience utilities and tools.</p>
+</li>
+<li>
+<p>{product-title}'s pipeline feature that integrates a streamlined,
+Kubernetes-enabled Jenkins experience in the user&#8217;s project space.</p>
+</li>
+<li>
+<p>The {product-title}'s source-to-image feature, which allows you to easily
+deploy source code, dockerfiles, or container images across the cluster.</p>
+</li>
+<li>
+<p>Build strategies, builder pods, or imagestreams for end user container
+deployments.</p>
+</li>
+<li>
+<p>The <code>odo</code> developer command line.</p>
+</li>
+<li>
+<p>The developer persona in the {product-title} web console.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_feature_summary"><a class="anchor" href="#_feature_summary"></a>Feature summary</h3>
+<div class="paragraph">
+<p>The following table is a summary of the feature availability in OpenShift Container Engine and
+{product-title}.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Features in OpenShift Container Engine and {product-title}</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"></th>
+<th class="tableblock halign-left valign-top">OpenShift Container Engine</th>
+<th class="tableblock halign-left valign-top">{product-title}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Core Kubernetes and container orchestration</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise-class Kubernetes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red Hat Enterprise Linux for Virtual Datacenters and Red Hat CoreOS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows containers compatible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Enterprise-ready configurations</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Complete life-cycle automation of platform</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Management, monitoring, alerting, and remedy through Prometheus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise-ready security</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Standard infrastructure services</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edge routing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flat networking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes storage plug-ins</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Core user experience</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application deployments, deployment configuration, templates, and Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrator console</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operator life cycle management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kubectl command line</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Developer projects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prometheus metrics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Maintained and curated content</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red Hat Ecosystem Catalog access</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Independent Software Vendor and partner Operator access</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Catalog and Brokers for cloud content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Red Hat add-ons</p></th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="6"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift Container Storage compatible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red Hat Middleware compatible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Serverless Cloud Functions compatible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Istio runtime launchers compatible</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quay integration compatible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift Virtualization for virtual machines compatible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Advanced cluster management</p></th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chargeback</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kiali (Jaeger and OpenTracing)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Advanced networking</p></th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egress per pod or namespace</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ingress for non-standard ports</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multi-tenant SDN</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red Hat Service Mesh (Istio)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Single Root I/O Virtualization (SR-IOV)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Developer experience</p></th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integrated CI/CD pipelines</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source-to-Image Container factory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">odo command line</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Developer console</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_subscription_limitations"><a class="anchor" href="#_subscription_limitations"></a>Subscription Limitations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OpenShift Container Engine is a subscription offering that provides {product-title} with a limited set
+of supported features at a lower list price. OpenShift Container Engine and {product-title} are the
+same product and, therefore, all software and features are delivered in both.
+There is only one download, {product-title}. OpenShift Container Engine uses the {product-title}
+documentation and support services and bug errata for this reason.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

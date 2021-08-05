@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admission plug-ins :: Red Hat Docs</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Red Hat Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhocp" data-version="4.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat Openshift Container Platform</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">About</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Welcome</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../learn_more_about_openshift.html">Learn more about OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../oke_about.html">About OpenShift Kubernetes Engine</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../legal-notice.html">Legal notice</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../release_notes/ocp-4-8-release-notes.html">OpenShift Container Platform 4.8 release notes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../release_notes/versioning-policy.html">Versioning policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architectue</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture.html">Product architecture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture-installation.html">Installation and update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="control-plane.html">The control plane</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="understanding-development.html">Understand OpenShift development</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture-rhcos.html">Red Hat Enterprise Linux CoreOS</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="admission-plug-ins.html">Admission plug-ins</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Openshift Container Platform</span>
+    <span class="version">4.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat Openshift Container Platform</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">4.8</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat Openshift Container Platform</a></li>
+    <li>Architectue</li>
+    <li><a href="admission-plug-ins.html">Admission plug-ins</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/ganelson/Documents/alt/openshift-docs/modules/architecture/pages/admission-plug-ins.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Admission plug-ins</h1>
+<div class="sect1">
+<h2 id="admission-plug-ins-about_admission-plug-ins"><a class="anchor" href="#admission-plug-ins-about_admission-plug-ins"></a>About admission plug-ins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Admission plug-ins are used to help regulate how OpenShift Container Platform 4.8 functions. Admission plug-ins intercept requests to the master API to validate resource requests and ensure policies are adhered to, after the request is authenticated and authorized. For example, they are commonly used to enforce security policy, resource limitations or configuration requirements.</p>
+</div>
+<div class="paragraph">
+<p>Admission plug-ins run in sequence as an admission chain. If any admission plug-in in the sequence rejects a request, the whole chain is aborted and an error is returned.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift Container Platform has a default set of admission plug-ins enabled for each resource type. These are required for proper functioning of the cluster. Admission plug-ins ignore resources that they are not responsible for.</p>
+</div>
+<div class="paragraph">
+<p>In addition to the defaults, the admission chain can be extended dynamically through webhook admission plug-ins that call out to custom webhook servers. There are two types of webhook admission plug-ins: a mutating admission plug-in and a validating admission plug-in. The mutating admission plug-in runs first and can both modify resources and validate requests. The validating admission plug-in validates requests and runs after the mutating admission plug-in so that modifications triggered by the mutating admission plug-in can also be validated.</p>
+</div>
+<div class="paragraph">
+<p>Calling webhook servers through a mutating admission plug-in can produce side effects on resources related to the target object. In such situations, you must take steps to validate that the end result is as expected.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Dynamic admission should be used cautiously because it impacts cluster control plane operations. When calling webhook servers through webhook admission plug-ins in OpenShift Container Platform 4.8, ensure that you have read the documentation fully and tested for side effects of mutations. Include steps to restore resources back to their original state prior to mutation, in the event that a request does not pass through the entire admission chain.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="admission-plug-ins-default_admission-plug-ins"><a class="anchor" href="#admission-plug-ins-default_admission-plug-ins"></a>Default admission plug-ins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A set of default admission plug-ins is enabled in OpenShift Container Platform 4.8. These default plug-ins contribute to fundamental control plane functionality, such as ingress policy, cluster resource limit override and quota policy.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="admission-webhooks-about_admission-plug-ins"><a class="anchor" href="#admission-webhooks-about_admission-plug-ins"></a>Webhook admission plug-ins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to OpenShift Container Platform default admission plug-ins, dynamic admission can be implemented through webhook admission plug-ins that call webhook servers, to extend the functionality of the admission chain. Webhook servers are called over HTTP at defined endpoints.</p>
+</div>
+<div class="paragraph">
+<p>There are two types of webhook admission plug-ins in OpenShift Container Platform:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>During the admission process, the <em>mutating admission plug-in</em> can perform tasks, such as injecting affinity labels.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>At the end of the admission process, the <em>validating admission plug-in</em> can be used to make sure an object is configured properly, for example ensuring affinity labels are as expected. If the validation passes, OpenShift Container Platform schedules the object as configured.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When an API request comes in, mutating or validating admission plug-ins use the list of external webhooks in the configuration and call them in parallel:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If all of the webhooks approve the request, the admission chain continues.</p>
+</li>
+<li>
+<p>If any of the webhooks deny the request, the admission request is denied and the reason for doing so is based on the first denial.</p>
+</li>
+<li>
+<p>If more than one webhook denies the admission request, only the first denial reason is returned to the user.</p>
+</li>
+<li>
+<p>If an error is encountered when calling a webhook, the request is either denied or the webhook is ignored depending on the error policy set. If the error policy is set to <code>Ignore</code>, the request is unconditionally accepted in the event of a failure. If the policy is set to <code>Fail</code>, failed requests are denied. Using <code>Ignore</code> can result in unpredictable behavior for all clients.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Communication between the webhook admission plug-in and the webhook server must use TLS. Generate a CA certificate and use the certificate to sign the server certificate that is used by your webhook admission server. The PEM-encoded CA certificate is supplied to the webhook admission plug-in using a mechanism, such as service serving certificate secrets.</p>
+</div>
+<div class="paragraph">
+<p>The following diagram illustrates the sequential admission chain process within which multiple webhook servers are called.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/api-admission-chain.png" alt="API admission stage">
+</div>
+<div class="title">Figure 1. API admission chain with mutating and validating admission plug-ins</div>
+</div>
+<div class="paragraph">
+<p>An example webhook admission plug-in use case is where all pods must have a common set of labels. In this example, the mutating admission plug-in can inject labels and the validating admission plug-in can check that labels are as expected. OpenShift Container Platform would subsequently schedule pods that include required labels and reject those that do not.</p>
+</div>
+<div class="paragraph">
+<p>Some common webhook admission plug-in use cases include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Namespace reservation.</p>
+</li>
+<li>
+<p>Limiting custom network resources managed by the SR-IOV network device plug-in.</p>
+</li>
+<li>
+<p>Defining tolerations that enable taints to qualify which pods should be scheduled on a node.</p>
+</li>
+<li>
+<p>Pod priority class validation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="admission-webhook-types_admission-plug-ins"><a class="anchor" href="#admission-webhook-types_admission-plug-ins"></a>Types of webhook admission plug-ins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cluster administrators can call out to webhook servers through the mutating admission plug-in or the validating admission plug-in in the API server admission chain.</p>
+</div>
+<div class="sect2">
+<h3 id="mutating-admission-plug-in_admission-plug-ins"><a class="anchor" href="#mutating-admission-plug-in_admission-plug-ins"></a>Mutating admission plug-in</h3>
+<div class="paragraph">
+<p>The mutating admission plug-in is invoked during the mutation phase of the admission process, which allows modification of resource content before it is persisted. One example webhook that can be called through the mutating admission plug-in is the Pod Node Selector feature, which uses an annotation on a namespace to find a label selector and add it to the pod specification.</p>
+</div>
+<div id="mutating-admission-plug-in-config_admission-plug-ins" class="listingblock">
+<div class="title">Sample mutating admission plug-in configuration</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-yaml hljs" data-lang="yaml">apiVersion: admissionregistration.k8s.io/v1beta1
+kind: MutatingWebhookConfiguration <i class="conum" data-value="1"></i><b>(1)</b>
+metadata:
+  name: &lt;webhook_name&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+webhooks:
+- name: &lt;webhook_name&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+  clientConfig: <i class="conum" data-value="4"></i><b>(4)</b>
+    service:
+      namespace: default <i class="conum" data-value="5"></i><b>(5)</b>
+      name: kubernetes <i class="conum" data-value="6"></i><b>(6)</b>
+     path: &lt;webhook_url&gt; <i class="conum" data-value="7"></i><b>(7)</b>
+    caBundle: &lt;ca_signing_certificate&gt; <i class="conum" data-value="8"></i><b>(8)</b>
+  rules: <i class="conum" data-value="9"></i><b>(9)</b>
+  - operations: <i class="conum" data-value="10"></i><b>(10)</b>
+    - &lt;operation&gt;
+    apiGroups:
+    - ""
+    apiVersions:
+    - "*"
+    resources:
+    - &lt;resource&gt;
+  failurePolicy: &lt;policy&gt; <i class="conum" data-value="11"></i><b>(11)</b>
+  sideEffects: None</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Specifies a mutating admission plug-in configuration.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The name for the <code>MutatingWebhookConfiguration</code> object. Replace <code>&lt;webhook_name&gt;</code> with the appropriate value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The name of the webhook to call. Replace <code>&lt;webhook_name&gt;</code> with the appropriate value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Information about how to connect to, trust, and send data to the webhook server.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The namespace where the front-end service is created.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>The name of the front-end service.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>The webhook URL used for admission requests. Replace <code>&lt;webhook_url&gt;</code> with the appropriate value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>A PEM-encoded CA certificate that signs the server certificate that is used by the webhook server.  Replace <code>&lt;ca_signing_certificate&gt;</code> with the appropriate certificate in base64 format.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>Rules that define when the API server should use this webhook admission plug-in.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td>One or more operations that trigger the API server to call this webhook admission plug-in. Possible values are <code>create</code>, <code>update</code>, <code>delete</code> or <code>connect</code>. Replace <code>&lt;operation&gt;</code> and <code>&lt;resource&gt;</code> with the appropriate values.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="11"></i><b>11</b></td>
+<td>Specifies how the policy should proceed if the webhook server is unavailable.
+Replace <code>&lt;policy&gt;</code> with either <code>Ignore</code> (to unconditionally accept the request in the event of a failure) or <code>Fail</code> (to deny the failed request). Using <code>Ignore</code> can result in unpredictable behavior for all clients.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In OpenShift Container Platform 4.8, objects created by users or control loops through a mutating admission plug-in might return unexpected results, especially if values set in an initial request are overwritten, which is not recommended.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="validating-admission-plug-in_admission-plug-ins"><a class="anchor" href="#validating-admission-plug-in_admission-plug-ins"></a>Validating admission plug-in</h3>
+<div class="paragraph">
+<p>A validating admission plug-in is invoked during the validation phase of the admission process. This phase allows the enforcement of invariants on particular API resources to ensure that the resource does not change again. The Pod Node Selector is also an example of a webhook which is called by the validating admission plug-in, to ensure that all <code>nodeSelector</code> fields are constrained by the node selector restrictions on the namespace.</p>
+</div>
+<div id="validating-admission-plug-in-config_admission-plug-ins" class="listingblock">
+<div class="title">Sample validating admission plug-in configuration</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-yaml hljs" data-lang="yaml">apiVersion: admissionregistration.k8s.io/v1beta1
+kind: ValidatingWebhookConfiguration <i class="conum" data-value="1"></i><b>(1)</b>
+metadata:
+  name: &lt;webhook_name&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+webhooks:
+- name: &lt;webhook_name&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+  clientConfig: <i class="conum" data-value="4"></i><b>(4)</b>
+    service:
+      namespace: default  <i class="conum" data-value="5"></i><b>(5)</b>
+      name: kubernetes <i class="conum" data-value="6"></i><b>(6)</b>
+     path: &lt;webhook_url&gt; <i class="conum" data-value="7"></i><b>(7)</b>
+    caBundle: &lt;ca_signing_certificate&gt; <i class="conum" data-value="8"></i><b>(8)</b>
+  rules: <i class="conum" data-value="9"></i><b>(9)</b>
+  - operations: <i class="conum" data-value="10"></i><b>(10)</b>
+    - &lt;operation&gt;
+    apiGroups:
+    - ""
+    apiVersions:
+    - "*"
+    resources:
+    - &lt;resource&gt;
+  failurePolicy: &lt;policy&gt; <i class="conum" data-value="11"></i><b>(11)</b>
+  sideEffects: Unknown</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Specifies a validating admission plug-in configuration.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The name for the <code>ValidatingWebhookConfiguration</code> object. Replace <code>&lt;webhook_name&gt;</code> with the appropriate value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The name of the webhook to call. Replace <code>&lt;webhook_name&gt;</code> with the appropriate value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Information about how to connect to, trust, and send data to the webhook server.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The namespace where the front-end service is created.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>The name of the front-end service.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>The webhook URL used for admission requests. Replace <code>&lt;webhook_url&gt;</code> with the appropriate value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>A PEM-encoded CA certificate that signs the server certificate that is used by the webhook server.  Replace <code>&lt;ca_signing_certificate&gt;</code> with the appropriate certificate in base64 format.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>Rules that define when the API server should use this webhook admission plug-in.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td>One or more operations that trigger the API server to call this webhook admission plug-in. Possible values are <code>create</code>, <code>update</code>, <code>delete</code> or <code>connect</code>. Replace <code>&lt;operation&gt;</code> and <code>&lt;resource&gt;</code> with the appropriate values.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="11"></i><b>11</b></td>
+<td>Specifies how the policy should proceed if the webhook server is unavailable.
+Replace <code>&lt;policy&gt;</code> with either <code>Ignore</code> (to unconditionally accept the request in the event of a failure) or <code>Fail</code> (to deny the failed request). Using <code>Ignore</code> can result in unpredictable behavior for all clients.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuring-dynamic-admission_admission-plug-ins"><a class="anchor" href="#configuring-dynamic-admission_admission-plug-ins"></a>Configuring dynamic admission</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This procedure outlines high-level steps to configure dynamic admission. The functionality of the admission chain is extended by configuring a webhook admission plug-in to call out to a webhook server.</p>
+</div>
+<div class="paragraph">
+<p>The webhook server is also configured as an aggregated API server. This allows other OpenShift Container Platform components to communicate with the webhook using internal credentials and facilitates testing using the <code>oc</code> command. Additionally, this enables role based access control (RBAC) into the webhook and prevents token information from other API servers from being disclosed to the webhook.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>An OpenShift Container Platform account with cluster administrator access.</p>
+</li>
+<li>
+<p>The OpenShift Container Platform CLI (<code>oc</code>) installed.</p>
+</li>
+<li>
+<p>A published webhook server container image.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Build a webhook server container image and make it available to the cluster using an image registry.</p>
+</li>
+<li>
+<p>Create a local CA key and certificate and use them to sign the webhook server&#8217;s certificate signing request (CSR).</p>
+</li>
+<li>
+<p>Create a new project for webhook resources:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-terminal hljs" data-lang="terminal">$ oc new-project my-webhook-namespace  <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Note that the webhook server might expect a specific name.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Define RBAC rules for the aggregated API service in a file called <code>rbac.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-yaml hljs" data-lang="yaml">apiVersion: v1
+kind: List
+items:
+
+- apiVersion: rbac.authorization.k8s.io/v1  <i class="conum" data-value="1"></i><b>(1)</b>
+  kind: ClusterRoleBinding
+  metadata:
+    name: auth-delegator-my-webhook-namespace
+  roleRef:
+    kind: ClusterRole
+    apiGroup: rbac.authorization.k8s.io
+    name: system:auth-delegator
+  subjects:
+  - kind: ServiceAccount
+    namespace: my-webhook-namespace
+    name: server
+
+- apiVersion: rbac.authorization.k8s.io/v1  <i class="conum" data-value="2"></i><b>(2)</b>
+  kind: ClusterRole
+  metadata:
+    annotations:
+    name: system:openshift:online:my-webhook-server
+  rules:
+  - apiGroups:
+    - online.openshift.io
+    resources:
+    - namespacereservations  <i class="conum" data-value="3"></i><b>(3)</b>
+    verbs:
+    - get
+    - list
+    - watch
+
+- apiVersion: rbac.authorization.k8s.io/v1  <i class="conum" data-value="4"></i><b>(4)</b>
+  kind: ClusterRole
+  metadata:
+    name: system:openshift:online:my-webhook-requester
+  rules:
+  - apiGroups:
+    - admission.online.openshift.io
+    resources:
+    - namespacereservations <i class="conum" data-value="5"></i><b>(5)</b>
+    verbs:
+    - create
+
+- apiVersion: rbac.authorization.k8s.io/v1  <i class="conum" data-value="6"></i><b>(6)</b>
+  kind: ClusterRoleBinding
+  metadata:
+    name: my-webhook-server-my-webhook-namespace
+  roleRef:
+    kind: ClusterRole
+    apiGroup: rbac.authorization.k8s.io
+    name: system:openshift:online:my-webhook-server
+  subjects:
+  - kind: ServiceAccount
+    namespace: my-webhook-namespace
+    name: server
+
+- apiVersion: rbac.authorization.k8s.io/v1  <i class="conum" data-value="7"></i><b>(7)</b>
+  kind: RoleBinding
+  metadata:
+    namespace: kube-system
+    name: extension-server-authentication-reader-my-webhook-namespace
+  roleRef:
+    kind: Role
+    apiGroup: rbac.authorization.k8s.io
+    name: extension-apiserver-authentication-reader
+  subjects:
+  - kind: ServiceAccount
+    namespace: my-webhook-namespace
+    name: server
+
+- apiVersion: rbac.authorization.k8s.io/v1  <i class="conum" data-value="8"></i><b>(8)</b>
+  kind: ClusterRole
+  metadata:
+    name: my-cluster-role
+  rules:
+  - apiGroups:
+    - admissionregistration.k8s.io
+    resources:
+    - validatingwebhookconfigurations
+    - mutatingwebhookconfigurations
+    verbs:
+    - get
+    - list
+    - watch
+  - apiGroups:
+    - ""
+    resources:
+    - namespaces
+    verbs:
+    - get
+    - list
+    - watch
+
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: ClusterRoleBinding
+  metadata:
+    name: my-cluster-role
+  roleRef:
+    kind: ClusterRole
+    apiGroup: rbac.authorization.k8s.io
+    name: my-cluster-role
+  subjects:
+  - kind: ServiceAccount
+    namespace: my-webhook-namespace
+    name: server</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Delegates authentication and authorization to the webhook server API.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Allows the webhook server to access cluster resources.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Points to resources. This example points to the <code>namespacereservations</code> resource.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Enables the aggregated API server to create admission reviews.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Points to resources. This example points to the <code>namespacereservations</code> resource.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Enables the webhook server to access cluster resources.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>Role binding to read the configuration for terminating authentication.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>Default cluster role and cluster role bindings for an aggregated API server.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Apply those RBAC rules to the cluster:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-terminal hljs" data-lang="terminal">$ oc auth reconcile -f rbac.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a YAML file called <code>webhook-daemonset.yaml</code> that is used to deploy a webhook as a daemon set server in a namespace:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-yaml hljs" data-lang="yaml">apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  namespace: my-webhook-namespace
+  name: server
+  labels:
+    server: "true"
+spec:
+  selector:
+    matchLabels:
+      server: "true"
+  template:
+    metadata:
+      name: server
+      labels:
+        server: "true"
+    spec:
+      serviceAccountName: server
+      containers:
+      - name: my-webhook-container  <i class="conum" data-value="1"></i><b>(1)</b>
+        image: &lt;image_registry_username&gt;/&lt;image_path&gt;:&lt;tag&gt;  <i class="conum" data-value="2"></i><b>(2)</b>
+        imagePullPolicy: IfNotPresent
+        command:
+        - &lt;container_commands&gt;  <i class="conum" data-value="3"></i><b>(3)</b>
+        ports:
+        - containerPort: 8443 <i class="conum" data-value="4"></i><b>(4)</b>
+        volumeMounts:
+        - mountPath: /var/serving-cert
+          name: serving-cert
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8443 <i class="conum" data-value="5"></i><b>(5)</b>
+            scheme: HTTPS
+      volumes:
+      - name: serving-cert
+        secret:
+          defaultMode: 420
+          secretName: server-serving-cert</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Note that the webhook server might expect a specific container name.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Points to a webhook server container image. Replace <code>&lt;image_registry_username&gt;/&lt;image_path&gt;:&lt;tag&gt;</code> with the appropriate value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Specifies webhook container run commands. Replace <code>&lt;container_commands&gt;</code> with the appropriate value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines the target port within pods. This example uses port 8443.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Specifies the port used by the readiness probe. This example uses port 8443.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Deploy the daemon set:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-terminal hljs" data-lang="terminal">$ oc apply -f webhook-daemonset.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Define a secret for the service serving certificate signer, within a YAML file called <code>webhook-secret.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-yaml hljs" data-lang="yaml">apiVersion: v1
+kind: Secret
+metadata:
+  namespace: my-webhook-namespace
+  name: server-serving-cert
+type: kubernetes.io/tls
+data:
+  tls.crt: &lt;server_certificate&gt;  <i class="conum" data-value="1"></i><b>(1)</b>
+  tls.key: &lt;server_key&gt;  <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>References the signed webhook server certificate. Replace <code>&lt;server_certificate&gt;</code> with the appropriate certificate in base64 format.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>References the signed webhook server key. Replace <code>&lt;server_key&gt;</code> with the appropriate key in base64 format.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Create the secret:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-terminal hljs" data-lang="terminal">$ oc apply -f webhook-secret.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Define a service account and service, within a YAML file called <code>webhook-service.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-yaml hljs" data-lang="yaml">apiVersion: v1
+kind: List
+items:
+
+- apiVersion: v1
+  kind: ServiceAccount
+  metadata:
+    namespace: my-webhook-namespace
+    name: server
+
+- apiVersion: v1
+  kind: Service
+  metadata:
+    namespace: my-webhook-namespace
+    name: server
+    annotations:
+      service.alpha.openshift.io/serving-cert-secret-name: server-serving-cert
+  spec:
+    selector:
+      server: "true"
+    ports:
+    - port: 443  <i class="conum" data-value="1"></i><b>(1)</b>
+      targetPort: 8443  <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the port that the service listens on. This example uses port 443.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines the target port within pods that the service forwards connections to. This example uses port 8443.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Expose the webhook server within the cluster:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-terminal hljs" data-lang="terminal">$ oc apply -f webhook-service.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Define a custom resource definition for the webhook server, in a file called <code>webhook-crd.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-yaml hljs" data-lang="yaml">apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: namespacereservations.online.openshift.io  <i class="conum" data-value="1"></i><b>(1)</b>
+spec:
+  group: online.openshift.io  <i class="conum" data-value="2"></i><b>(2)</b>
+  version: v1alpha1  <i class="conum" data-value="3"></i><b>(3)</b>
+  scope: Cluster  <i class="conum" data-value="4"></i><b>(4)</b>
+  names:
+    plural: namespacereservations  <i class="conum" data-value="5"></i><b>(5)</b>
+    singular: namespacereservation  <i class="conum" data-value="6"></i><b>(6)</b>
+    kind: NamespaceReservation  <i class="conum" data-value="7"></i><b>(7)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Reflects <code>CustomResourceDefinition</code> <code>spec</code> values and is in the format <code>&lt;plural&gt;.&lt;group&gt;</code>. This example uses the <code>namespacereservations</code> resource.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>REST API group name.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>REST API version name.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Accepted values are <code>Namespaced</code> or <code>Cluster</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Plural name to be included in URL.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Alias seen in <code>oc</code> output.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>The reference for resource manifests.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Apply the custom resource definition:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-terminal hljs" data-lang="terminal">$ oc apply -f webhook-crd.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Configure the webhook server also as an aggregated API server, within a file called <code>webhook-api-service.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-yaml hljs" data-lang="yaml">apiVersion: apiregistration.k8s.io/v1beta1
+kind: APIService
+metadata:
+  name: v1beta1.admission.online.openshift.io
+spec:
+  caBundle: &lt;ca_signing_certificate&gt;  <i class="conum" data-value="1"></i><b>(1)</b>
+  group: admission.online.openshift.io
+  groupPriorityMinimum: 1000
+  versionPriority: 15
+  service:
+    name: server
+    namespace: my-webhook-namespace
+  version: v1beta1</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>A PEM-encoded CA certificate that signs the server certificate that is used by the webhook server. Replace <code>&lt;ca_signing_certificate&gt;</code> with the appropriate certificate in base64 format.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Deploy the aggregated API service:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-terminal hljs" data-lang="terminal">$ oc apply -f webhook-api-service.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Define the webhook admission plug-in configuration within a file called <code>webhook-config.yaml</code>. This example uses the validating admission plug-in:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-yaml hljs" data-lang="yaml">apiVersion: admissionregistration.k8s.io/v1beta1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: namespacereservations.admission.online.openshift.io  <i class="conum" data-value="1"></i><b>(1)</b>
+webhooks:
+- name: namespacereservations.admission.online.openshift.io  <i class="conum" data-value="2"></i><b>(2)</b>
+  clientConfig:
+    service:  <i class="conum" data-value="3"></i><b>(3)</b>
+      namespace: default
+      name: kubernetes
+      path: /apis/admission.online.openshift.io/v1beta1/namespacereservations  <i class="conum" data-value="4"></i><b>(4)</b>
+    caBundle: &lt;ca_signing_certificate&gt;  <i class="conum" data-value="5"></i><b>(5)</b>
+  rules:
+  - operations:
+    - CREATE
+    apiGroups:
+    - project.openshift.io
+    apiVersions:
+    - "*"
+    resources:
+    - projectrequests
+  - operations:
+    - CREATE
+    apiGroups:
+    - ""
+    apiVersions:
+    - "*"
+    resources:
+    - namespaces
+  failurePolicy: Fail</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Name for the <code>ValidatingWebhookConfiguration</code> object. This example uses the <code>namespacereservations</code> resource.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Name of the webhook to call. This example uses the <code>namespacereservations</code> resource.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Enables access to the webhook server through the aggregated API.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The webhook URL used for admission requests. This example uses the <code>namespacereservation</code> resource.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>A PEM-encoded CA certificate that signs the server certificate that is used by the webhook server. Replace <code>&lt;ca_signing_certificate&gt;</code> with the appropriate certificate in base64 format.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Deploy the webhook:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-terminal hljs" data-lang="terminal">$ oc apply -f webhook-config.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the webhook is functioning as expected. For example, if you have configured dynamic admission to reserve specific namespaces, confirm that requests to create those namespaces are rejected and that requests to create non-reserved namespaces succeed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="admission-plug-ins-additional-resources"><a class="anchor" href="#admission-plug-ins-additional-resources"></a>Additional resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#../nodes/scheduling/nodes-scheduler-taints-tolerations.adoc#nodes-scheduler-taints-tolerations_dedicating_nodes-scheduler-taints-tolerations" class="page unresolved">Defining tolerations that enable taints to qualify which pods should be scheduled on a node</a></p>
+</li>
+<li>
+<p><a href="#../nodes/pods/nodes-pods-priority.adoc#admin-guide-priority-preemption-names_nodes-pods-priority" class="page unresolved">Pod priority class validation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

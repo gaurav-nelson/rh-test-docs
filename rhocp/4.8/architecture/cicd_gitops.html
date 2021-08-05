@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>The CI/CD methodology and practice :: Red Hat Docs</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Red Hat Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhocp" data-version="4.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat Openshift Container Platform</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">About</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Welcome</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../learn_more_about_openshift.html">Learn more about OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../oke_about.html">About OpenShift Kubernetes Engine</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../legal-notice.html">Legal notice</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../release_notes/ocp-4-8-release-notes.html">OpenShift Container Platform 4.8 release notes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../release_notes/versioning-policy.html">Versioning policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architectue</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture.html">Product architecture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture-installation.html">Installation and update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="control-plane.html">The control plane</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="understanding-development.html">Understand OpenShift development</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture-rhcos.html">Red Hat Enterprise Linux CoreOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admission-plug-ins.html">Admission plug-ins</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Openshift Container Platform</span>
+    <span class="version">4.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat Openshift Container Platform</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">4.8</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat Openshift Container Platform</a></li>
+    <li><a href="cicd_gitops.html">The CI/CD methodology and practice</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/ganelson/Documents/alt/openshift-docs/modules/architecture/pages/cicd_gitops.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">The CI/CD methodology and practice</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using a <em>continuous integration/continuous delivery</em> (CI/CD) methodology enables you to regularly deliver applications to customers by introducing automation into the stages of application development, from integration and testing phases to delivery and deployment. The CI/CD process is often referred to as a "CI/CD pipeline." The main concepts attributed to CI/CD are continuous integration, continuous delivery, and continuous deployment.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cicd_admin"><a class="anchor" href="#cicd_admin"></a>CI/CD for cluster administration and application configuration management</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Continuous integration</em> is an automation process for developers. Code changes to an application are regularly built, tested, and merged to a shared repository.</p>
+</div>
+<div class="paragraph">
+<p><em>Continuous delivery</em> and <em>continuous deployment</em> are closely related concepts that are sometimes used interchangeably and refer to automation of the pipeline.
+Continuous delivery uses automation to ensure that a developer&#8217;s changes to an application are tested and sent to a repository, where an operations team can deploy them to a production environment. Continuous deployment enables the release of changes, starting from the repository and ending in production. Continuous deployment speeds up application delivery and prevents the operations team from getting overloaded.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cicd_gitops_methodology"><a class="anchor" href="#cicd_gitops_methodology"></a>The GitOps methodology and practice</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>GitOps</em> is a set of practices that use Git pull requests to manage infrastructure and application configurations. The Git repository in GitOps is the only source of truth for system and application configuration. The repository contains the entire state of the system so that the trail of changes to the system state are visible and auditable. GitOps enables you to implement a DevOps methodology.</p>
+</div>
+<div class="paragraph">
+<p>You can use GitOps tooling to create repeatable and predictable processes for managing and recreating OpenShift Container Platform clusters and applications. By using GitOps, you can address the issues of infrastructure and application configuration sprawl. It simplifies the propagation of infrastructure and application configuration changes across multiple clusters by defining your infrastructure and applications definitions as “code.” Implementing GitOps for your cluster configuration files can make automated installation easier and allow you to configure automated cluster customizations. You can apply the core principles of developing and maintaining software in a Git repository to the creation and management of your cluster and application configuration files.</p>
+</div>
+<div class="paragraph">
+<p>By using OpenShift Container Platform to automate both your cluster configuration and container development process, you can pick and choose where and when to adopt GitOps practices. Using a CI pipeline that pairs with your GitOps strategy and execution plan is ideal. OpenShift Container Platform provides the flexibility to choose when and how you integrate this methodology into your business practices and pipelines.</p>
+</div>
+<div class="paragraph">
+<p>With GitOps integration, you can declaratively configure and store your OpenShift Container Platform cluster configuration</p>
+</div>
+<div class="paragraph">
+<p>GitOps works well with OpenShift Container Platform because you can both declaratively configure clusters and store the state of the cluster configuration in Git. For more information, see <a href="#../post_installation_configuration/cluster-tasks.adoc#available_cluster_customizations" class="page unresolved">Available cluster customizations</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="cicd_gitops_cluster_administration"><a class="anchor" href="#cicd_gitops_cluster_administration"></a>GitOps for single-cluster and multi-cluster administration</h3>
+<div class="paragraph">
+<p>Whether you need one or more independent or cooperative OpenShift Container Platform clusters, you can use a GitOps strategy to manage the following tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure that the clusters have similar states for configuration, monitoring, or storage.</p>
+</li>
+<li>
+<p>Recover or recreate clusters from a known state.</p>
+</li>
+<li>
+<p>Create clusters with a known state.</p>
+</li>
+<li>
+<p>Apply or revert configuration changes to multiple OpenShift Container Platform clusters.</p>
+</li>
+<li>
+<p>Associate templated configuration with different environments.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cicd_gitops_application_configuration"><a class="anchor" href="#cicd_gitops_application_configuration"></a>GitOps for application configuration management</h3>
+<div class="paragraph">
+<p>You can also use GitOps practices to manage application configuration. This practice ensures consistency in applications when you deploy them to different clusters in different environments, like development, stage, and production. Managing application configuration with GitOps is also beneficial when you must deploy applications across multiple clusters, whether on-cloud or on-premise, for availability and scalability purposes.</p>
+</div>
+<div class="paragraph">
+<p>You can use a GitOps strategy to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Promote applications across clusters, from stage to production.</p>
+</li>
+<li>
+<p>Apply or revert application changes to multiple OpenShift Container Platform clusters.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cicd_gitops_integrators"><a class="anchor" href="#cicd_gitops_integrators"></a>GitOps technology providers and integrators</h3>
+<div class="paragraph">
+<p>There are several community offerings and third-party vendors that provide a high level of integration with OpenShift Container Platform.</p>
+</div>
+<div class="paragraph">
+<p>You can integrate GitOps into OpenShift Container Platform with the following community partners and third-party integrators:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#../architecture/argocd.adoc#argocd" class="page unresolved">ArgoCD</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

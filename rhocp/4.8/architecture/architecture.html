@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OpenShift Container Platform architecture :: Red Hat Docs</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Red Hat Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhocp" data-version="4.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat Openshift Container Platform</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">About</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Welcome</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../learn_more_about_openshift.html">Learn more about OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../oke_about.html">About OpenShift Kubernetes Engine</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../legal-notice.html">Legal notice</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../release_notes/ocp-4-8-release-notes.html">OpenShift Container Platform 4.8 release notes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../release_notes/versioning-policy.html">Versioning policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architectue</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="architecture.html">Product architecture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture-installation.html">Installation and update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="control-plane.html">The control plane</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="understanding-development.html">Understand OpenShift development</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture-rhcos.html">Red Hat Enterprise Linux CoreOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admission-plug-ins.html">Admission plug-ins</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Openshift Container Platform</span>
+    <span class="version">4.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat Openshift Container Platform</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">4.8</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat Openshift Container Platform</a></li>
+    <li>Architectue</li>
+    <li><a href="architecture.html">Product architecture</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/ganelson/Documents/alt/openshift-docs/modules/architecture/pages/architecture.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">OpenShift Container Platform architecture</h1>
+<div class="sect1">
+<h2 id="architecture-platform-introduction_architecture"><a class="anchor" href="#architecture-platform-introduction_architecture"></a>Introduction to OpenShift Container Platform</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OpenShift Container Platform is a platform for developing and running containerized
+applications. It is designed to allow applications and the data centers
+that support them to expand from just a few machines and applications to
+thousands of machines that serve millions of clients.</p>
+</div>
+<div class="paragraph">
+<p>With its foundation in Kubernetes, OpenShift Container Platform incorporates the same
+technology that serves as the engine for massive telecommunications, streaming
+video, gaming, banking, and other applications. Its implementation in open
+Red Hat technologies lets you extend your containerized applications beyond a
+single cloud to on-premise and multi-cloud environments.</p>
+</div>
+<div class="sect2">
+<h3 id="architecture-kubernetes-introduction_architecture"><a class="anchor" href="#architecture-kubernetes-introduction_architecture"></a>About Kubernetes</h3>
+<div class="paragraph">
+<p>Although container images and the containers that run from them are the
+primary building blocks for modern application development, to run them at scale
+requires a reliable and flexible distribution system. Kubernetes is the
+defacto standard for orchestrating containers.</p>
+</div>
+<div class="paragraph">
+<p>Kubernetes is an open source container orchestration engine for automating
+deployment, scaling, and management of containerized applications. The general
+concept of Kubernetes is fairly simple:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start with one or more worker nodes to run the container workloads.</p>
+</li>
+<li>
+<p>Manage the deployment of those workloads from one or more control plane nodes (also known as the master nodes).</p>
+</li>
+<li>
+<p>Wrap containers in a deployment unit called a pod. Using pods provides extra
+metadata with the container and offers the ability to group several containers
+in a single deployment entity.</p>
+</li>
+<li>
+<p>Create special kinds of assets. For example, services are represented by a
+set of pods and a policy that defines how they are accessed. This policy
+allows containers to connect to the services that they need even if they do not
+have the specific IP addresses for the services. Replication controllers are
+another special asset that indicates how many pod replicas are required to run
+at a time. You can use this capability to automatically scale your application
+to adapt to its current demand.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In only a few years, Kubernetes has seen massive cloud and on-premise adoption.
+The open source development model allows many people to extend Kubernetes
+by implementing different technologies for components such as networking,
+storage, and authentication.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="architecture-container-application-benefits_architecture"><a class="anchor" href="#architecture-container-application-benefits_architecture"></a>The benefits of containerized applications</h3>
+<div class="paragraph">
+<p>Using containerized applications offers many advantages over using traditional deployment methods. Where applications were once expected to be installed on operating systems that included all their dependencies, containers let an application carry their dependencies with them. Creating containerized applications offers many benefits.</p>
+</div>
+<div class="sect3">
+<h4 id="operating-system-benefits_architecture"><a class="anchor" href="#operating-system-benefits_architecture"></a>Operating system benefits</h4>
+<div class="paragraph">
+<p>Containers use small, dedicated Linux operating systems without a kernel. Their file system, networking, cgroups, process tables, and namespaces are separate from the host Linux system, but the containers can integrate with the hosts seamlessly when necessary. Being based on Linux allows containers to use all the advantages that come with the open source development model of rapid innovation.</p>
+</div>
+<div class="paragraph">
+<p>Because each container uses a dedicated operating system, you can deploy applications that require conflicting software dependencies on the same host. Each container carries its own dependent software and manages its own interfaces, such as networking and file systems, so applications never need to compete for those assets.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deployment-scaling-benefits_architecture"><a class="anchor" href="#deployment-scaling-benefits_architecture"></a>Deployment and scaling benefits</h4>
+<div class="paragraph">
+<p>If you employ rolling upgrades between major releases of your application, you can continuously improve your applications without downtime and still maintain compatibility with the current release.</p>
+</div>
+<div class="paragraph">
+<p>You can also deploy and test a new version of an application alongside the existing version. If the container passes your tests, simply deploy more new containers and remove the old ones.</p>
+</div>
+<div class="paragraph">
+<p>Since all the software dependencies for an application are resolved within the container itself, you can use a standardized operating system on each host in your data center. You do not need to configure a specific operating system for each application host. When your data center needs more capacity, you can deploy another generic host system.</p>
+</div>
+<div class="paragraph">
+<p>Similarly, scaling containerized applications is simple. OpenShift Container Platform offers a simple, standard way of scaling any containerized service. For example, if you build applications as a set of microservices rather than large, monolithic applications, you can scale the individual microservices individually to meet demand. This capability allows you to scale only the required services instead of the entire application, which can allow you to meet application demands while using minimal resources.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="architecture-platform-benefits_architecture"><a class="anchor" href="#architecture-platform-benefits_architecture"></a>OpenShift Container Platform overview</h3>
+<div class="paragraph">
+<p>OpenShift Container Platform provides enterprise-ready enhancements to Kubernetes, including the following enhancements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Integrated Red Hat technology. Major components in OpenShift Container Platform come from Red Hat Enterprise Linux (RHEL) and related Red Hat technologies. OpenShift Container Platform benefits from the intense testing and certification initiatives for Red Hat&#8217;s enterprise quality software.</p>
+</li>
+<li>
+<p>Open source development model. Development is completed in the open, and the source code is available from public software repositories. This open collaboration fosters rapid innovation and development.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Although Kubernetes excels at managing your applications, it does not specify
+or manage platform-level requirements or deployment processes. Powerful and
+flexible platform management tools and processes are important benefits that
+OpenShift Container Platform 4.8 offers. The following sections describe some
+unique features and benefits of OpenShift Container Platform.</p>
+</div>
+<div class="sect3">
+<h4 id="architecture-custom-os_architecture"><a class="anchor" href="#architecture-custom-os_architecture"></a>Custom operating system</h4>
+<div class="paragraph">
+<p>OpenShift Container Platform uses Red Hat Enterprise Linux CoreOS (RHCOS), a container-oriented operating
+system that combines some of the best features and functions of the CoreOS and
+Red Hat Atomic Host operating systems. RHCOS is specifically designed for
+running containerized applications from OpenShift Container Platform and works with new tools
+to provide fast installation, Operator-based management, and simplified upgrades.</p>
+</div>
+<div class="paragraph">
+<p>RHCOS includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ignition, which OpenShift Container Platform uses as a firstboot system configuration for initially bringing up and configuring machines.</p>
+</li>
+<li>
+<p>CRI-O, a Kubernetes native container runtime implementation that integrates closely with the operating system to deliver an efficient and optimized Kubernetes experience. CRI-O provides facilities for running, stopping, and restarting containers. It fully replaces the Docker Container Engine, which was used in OpenShift Container Platform 3.</p>
+</li>
+<li>
+<p>Kubelet, the primary node agent for Kubernetes that is responsible for
+launching and monitoring containers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In OpenShift Container Platform 4.8, you must use RHCOS for all control
+plane machines, but you can use Red Hat Enterprise Linux (RHEL) as the operating
+system for compute machines, which are also known as worker machines. If you choose to use RHEL workers, you
+must perform more system maintenance than if you use RHCOS for all of the
+cluster machines.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="architecture-platform-management_architecture"><a class="anchor" href="#architecture-platform-management_architecture"></a>Simplified installation and update process</h4>
+<div class="paragraph">
+<p>With OpenShift Container Platform 4.8, if you have an account with the right
+permissions, you can deploy a production cluster in supported clouds by running
+a single command and providing a few values. You can also customize your cloud
+installation or install your cluster in your data center if you use a supported
+platform.</p>
+</div>
+<div class="paragraph">
+<p>For clusters that use RHCOS for all machines, updating, or
+upgrading, OpenShift Container Platform is a simple, highly-automated process. Because
+OpenShift Container Platform completely controls the systems and services that run on each
+machine, including the operating system itself, from a central control plane,
+upgrades are designed to become automatic events. If your cluster contains
+RHEL worker machines, the control plane benefits from the streamlined update
+process, but you must perform more tasks to upgrade the RHEL machines.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="architecture-key-features_architecture"><a class="anchor" href="#architecture-key-features_architecture"></a>Other key features</h4>
+<div class="paragraph">
+<p>Operators are both the fundamental unit of the OpenShift Container Platform 4.8
+code base and a convenient way to deploy applications and software components
+for your applications to use. In OpenShift Container Platform, Operators serve as the platform foundation and remove the need for manual upgrades of operating systems and control plane applications. OpenShift Container Platform Operators such as the
+Cluster Version Operator and Machine Config Operator allow simplified,
+cluster-wide management of those critical components.</p>
+</div>
+<div class="paragraph">
+<p>Operator Lifecycle Manager (OLM) and the OperatorHub provide facilities for
+storing and distributing Operators to people developing and deploying applications.</p>
+</div>
+<div class="paragraph">
+<p>The Red Hat Quay Container Registry is a Quay.io container registry that serves
+most of the container images and Operators to OpenShift Container Platform clusters.
+Quay.io is a public registry version of Red Hat Quay that stores millions of images
+and tags.</p>
+</div>
+<div class="paragraph">
+<p>Other enhancements to Kubernetes in OpenShift Container Platform include improvements in
+software defined networking (SDN), authentication, log aggregation, monitoring,
+and routing. OpenShift Container Platform also offers a comprehensive web console and the
+custom OpenShift CLI (<code>oc</code>) interface.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="architecture-overview-image_architecture"><a class="anchor" href="#architecture-overview-image_architecture"></a>OpenShift Container Platform lifecycle</h4>
+<div class="paragraph">
+<p>The following figure illustrates the basic OpenShift Container Platform lifecycle:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Creating an OpenShift Container Platform cluster</p>
+</li>
+<li>
+<p>Managing the cluster</p>
+</li>
+<li>
+<p>Developing and deploying applications</p>
+</li>
+<li>
+<p>Scaling up applications</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/product-workflow-overview.png" alt="High-level OpenShift Container Platform flow">
+</div>
+<div class="title">Figure 1. High level OpenShift Container Platform overview</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cluster-entitlements_architecture"><a class="anchor" href="#cluster-entitlements_architecture"></a>Internet access for OpenShift Container Platform</h3>
+<div class="paragraph">
+<p>In OpenShift Container Platform 4.8, you require access to the Internet to
+install
+your cluster.</p>
+</div>
+<div class="paragraph">
+<p>You must have Internet access to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Access the <a href="https://cloud.redhat.com/openshift">Red Hat OpenShift Cluster Manager</a> page to download the installation program and perform subscription management. If the cluster has Internet access and you do not disable Telemetry, that service automatically entitles your cluster.</p>
+</li>
+<li>
+<p>Access <a href="http://quay.io">Quay.io</a> to obtain the packages that are required to install your cluster.</p>
+</li>
+<li>
+<p>Obtain the packages that are required to perform cluster updates.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
