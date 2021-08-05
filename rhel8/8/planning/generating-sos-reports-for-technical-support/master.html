@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Generating sos reports for technical support :: Red Hat Docs</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Red Hat Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhel8" data-version="8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Red Hat Enterprise Linux</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Welcome</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Planning</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../considerations-in-adopting-RHEL-8/master.html">Considerations in adopting RHEL 8</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="master.html">Generating SOS reports for technical support</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Enterprise Linux</span>
+    <span class="version">8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Red Hat Enterprise Linux</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../rhocp/4.8/index.html">Red Hat Openshift Container Platform</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../rhocp/4.8/index.html">4.8</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../rhocp/4.8/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Red Hat Enterprise Linux</a></li>
+    <li>Planning</li>
+    <li><a href="master.html">Generating SOS reports for technical support</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/ganelson/Documents/alt/rhel-docs/modules/planning/pages/generating-sos-reports-for-technical-support/master.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Generating sos reports for technical support</h1>
+<div class="sect1">
+<h2 id="making-open-source-more-inclusive"><a class="anchor" href="#making-open-source-more-inclusive"></a>Making open source more inclusive</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>Red Hat is committed to replacing problematic language in our code, documentation, and web properties. We are beginning with these four terms: master, slave, blacklist, and whitelist. Because of the enormity of this endeavor, these changes will be implemented gradually over several upcoming releases. For more details, see <a href="https://www.redhat.com/en/blog/making-open-source-more-inclusive-eradicating-problematic-language">our CTO Chris Wright&#8217;s message</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="proc_providing-feedback-on-red-hat-documentation_generating-sos-reports-for-technical-support"><a class="anchor" href="#proc_providing-feedback-on-red-hat-documentation_generating-sos-reports-for-technical-support"></a>Providing feedback on Red Hat documentation</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>We appreciate your input on our documentation. Please let us know how we could make it better. To do so:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For simple comments on specific passages:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make sure you are viewing the documentation in the <em>Multi-page HTML</em> format. In addition, ensure you see the <strong>Feedback</strong> button in the upper right corner of the document.</p>
+</li>
+<li>
+<p>Use your mouse cursor to highlight the part of text that you want to comment on.</p>
+</li>
+<li>
+<p>Click the <strong>Add Feedback</strong> pop-up that appears below the highlighted text.</p>
+</li>
+<li>
+<p>Follow the displayed instructions.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>For submitting more complex feedback, create a Bugzilla ticket:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the <a href="https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%208">Bugzilla</a> website.</p>
+</li>
+<li>
+<p>As the Component, use <strong>Documentation</strong>.</p>
+</li>
+<li>
+<p>Fill in the <strong>Description</strong> field with your suggestion for improvement. Include a link to the relevant part(s) of documentation.</p>
+</li>
+<li>
+<p>Click <strong>Submit Bug</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="generating-an-sos-report-for-technical-support_generating-sos-reports-for-technical-support"><a class="anchor" href="#generating-an-sos-report-for-technical-support_generating-sos-reports-for-technical-support"></a>Generating an <code>sos</code> report for technical support</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="what-the-sos-report-utility-does_generating-an-sosreport-for-technical-support"><a class="anchor" href="#what-the-sos-report-utility-does_generating-an-sosreport-for-technical-support"></a>What the <code>sos</code> report utility does</h3>
+<div class="paragraph _abstract">
+<p>An <code>sos</code> report is a common starting point for Red Hat technical support engineers when performing analysis of a service request for a RHEL system. The utility provides a standardized way to collect diagnostic information that Red Hat support engineers can reference throughout their investigation of issues reported in support cases. Using the <code>sosreport</code> utility helps to ensure that you are not repeatedly asked for data output.</p>
+</div>
+<div class="paragraph">
+<p>The <code>sosreport</code> utility collects configuration details, system information, and diagnostic information from a RHEL system such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The running kernel version.</p>
+</li>
+<li>
+<p>Loaded kernel modules.</p>
+</li>
+<li>
+<p>System and service configuration files.</p>
+</li>
+<li>
+<p>Diagnostic command output.</p>
+</li>
+<li>
+<p>A list of installed packages.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>sosreport</code> utility writes the data it collects to an archive named <code>sosreport-<em>&lt;host_name&gt;</em>-<em>&lt;support_case_number&gt;</em>-<em>&lt;YYYY-MM-DD&gt;</em>-<em>&lt;unique_random_characters&gt;</em>.tar.xz</code>.</p>
+</div>
+<div class="paragraph">
+<p>The utility stores the archive and its MD5 checksum in the <code>/var/tmp/</code> directory:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[root@server1 ~]# <strong>ll /var/tmp/sosreport</strong>*
+total 18704
+-rw-------. 1 root root <strong>19136596</strong> Jan 25 07:42 sosreport-server1-12345678-2021-01-25-tgictvu.<strong>tar.xz</strong>
+-rw-r--r--. 1 root root       <strong>33</strong> Jan 25 07:42 sosreport-server1-12345678-2021-01-25-tgictvu.tar.xz.<strong>md5</strong></pre>
+</div>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><code>sosreport</code> man page</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="installing-the-sos-package-from-the-command-line_generating-an-sosreport-for-technical-support"><a class="anchor" href="#installing-the-sos-package-from-the-command-line_generating-an-sosreport-for-technical-support"></a>Installing the <code>sos</code> package from the command line</h3>
+<div class="paragraph _abstract">
+<p>To use the <code>sosreport</code> utility, install the <code>sos</code> package.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You need <code>root</code> privileges.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Install the <code>sos</code> package.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[root@server ~]# <strong>dnf install sos</strong></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Verification steps</div>
+<ul>
+<li>
+<p>Use the <code>rpm</code> utility to verify that the <code>sos</code> package is installed.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[root@server ~]# <strong>rpm -q sos</strong>
+sos-3.9.1-6.el8.noarch</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="generating-an-sos-report-from-the-command-line_generating-an-sosreport-for-technical-support"><a class="anchor" href="#generating-an-sos-report-from-the-command-line_generating-an-sosreport-for-technical-support"></a>Generating an <code>sos</code> report from the command line</h3>
+<div class="paragraph _abstract">
+<p>Use the <code>sosreport</code> command to gather an <code>sos</code> report from a RHEL server.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the <code>sos</code> package.</p>
+</li>
+<li>
+<p>You need <code>root</code> privileges.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Run the <code>sosreport</code> command and follow the on-screen instructions. With version 3.9 and later of the <code>sos</code> package, you can add the <code>--upload</code> option to transfer the <code>sos</code> report to Red Hat immediately after generating it.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo sosreport</strong>
+[sudo] password for user:
+
+sosreport (version 3.9)
+
+This command will collect diagnostic and configuration information from
+this Red Hat Enterprise Linux system and installed applications.
+
+An archive containing the collected information will be generated in
+/var/tmp/sos.qkn_b7by and may be provided to a Red Hat support
+representative.
+
+...
+
+<strong>Press ENTER to continue, or CTRL-C to quit.</strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em>(Optional)</em> If you have already opened a Technical Support case with Red Hat, enter the case number to embed it in the <code>sos</code> report file name, and it will be uploaded to that case if you specified the <code>--upload</code> option. If you do not have a case number, leave this field blank. Entering a case number is optional and does not affect the operation of the <code>sosreport</code> utility.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Please enter the case id that you are generating this report for []: <strong><em>&lt;8-digit_case_number&gt;</em></strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Take note of the <code>sos</code> report file name displayed at the end of the console output.</p>
+<div class="literalblock">
+<div class="content">
+<pre>...
+Finished running plugins
+Creating compressed archive...
+
+Your sosreport has been generated and saved in:
+<strong>/var/tmp/sosreport-server1-12345678-2020-09-17-qmtnqng.tar.xz</strong>
+
+Size    <strong>16.51MiB</strong>
+Owner   <strong>root</strong>
+md5     <strong>bba955bbd9a434954e18da0c6778ba9a</strong>
+
+Please send this file to your support representative.</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can use the <code>--batch</code> option to generate an <code>sos</code> report without prompting for interactive input.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ sudo sosreport <strong>--batch</strong> --case-id <em>&lt;8-digit_case_number&gt;</em></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Verification steps</div>
+<ul>
+<li>
+<p>Verify that the <code>sosreport</code> utility created an archive in <code>/var/tmp/</code> matching the description from the command output.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo ls -l /var/tmp/sosreport</strong>*
+[sudo] password for user:
+-rw-------. 1 root root <strong>17310544</strong> Sep 17 19:11 <strong>/var/tmp/sosreport-server1-12345678-2020-09-17-qmtnqng.tar.xz</strong></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="#methods-for-providing-an-sos-report-to-red-hat-technical-support_generating-an-sosreport-for-technical-support">Methods for providing an <code>sos</code> report to Red Hat technical support</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc_generating-an-sos-report-and-securing-it-with-gpg-passphrase-encryption_generating-an-sosreport-for-technical-support"><a class="anchor" href="#proc_generating-an-sos-report-and-securing-it-with-gpg-passphrase-encryption_generating-an-sosreport-for-technical-support"></a>Generating an <code>sos</code> report and securing it with GPG passphrase encryption</h3>
+<div class="paragraph _abstract">
+<p>This procedure describes how to generate an <code>sos</code> report and secure it with symmetric GPG2 encryption based on a passphrase. You might want to secure the contents of an <code>sos</code> report with a password if, for example, you need to transfer it over a public network to a third party.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ensure you have sufficient space when creating an encrypted <code>sos</code> report, as it temporarily uses double the disk space:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>sosreport</code> utility creates an unencrypted <code>sos</code> report.</p>
+</li>
+<li>
+<p>The utility encrypts the <code>sos</code> report as a new file.</p>
+</li>
+<li>
+<p>The utility then removes the unencrypted archive.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the <code>sos</code> package.</p>
+</li>
+<li>
+<p>You need <code>root</code> privileges.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Run the <code>sosreport</code> command and specify a passphrase with the <code>--encrypt-pass</code> option. With version 3.9 and later of the <code>sos</code> package, you can add the <code>--upload</code> option to transfer the <code>sos</code> report to Red Hat immediately after generating it.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo sosreport --encrypt-pass <em>my-passphrase</em></strong>
+[sudo] password for user:
+
+sosreport (version 3.9)
+
+This command will collect diagnostic and configuration information from
+this Red Hat Enterprise Linux system and installed applications.
+
+An archive containing the collected information will be generated in
+/var/tmp/sos.6lck0myd and may be provided to a Red Hat support
+representative.
+
+...
+
+<strong>Press ENTER to continue, or CTRL-C to quit.</strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em>(Optional)</em> If you have already opened a Technical Support case with Red Hat, enter the case number to embed it in the <code>sos</code> report file name, and it will be uploaded to that case if you specified the <code>--upload</code> option. If you do not have a case number, leave this field blank. Entering a case number is optional and does not affect the operation of the <code>sosreport</code> utility.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Please enter the case id that you are generating this report for []: <strong><em>&lt;8-digit_case_number&gt;</em></strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Take note of the sos report file name displayed at the end of the console output.</p>
+<div class="literalblock">
+<div class="content">
+<pre>...
+Finished running plugins
+Creating compressed archive...
+
+Your sosreport has been generated and saved in:
+<strong>/var/tmp/secured-sosreport-server1-12345678-2021-01-24-ueqijfm.tar.xz.gpg</strong>
+
+Size    <strong>17.53MiB</strong>
+Owner   <strong>root</strong>
+md5     <strong>32e2bdb23a9ce3d35d59e1fc4c91fe54</strong>
+
+Please send this file to your support representative.</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>Verify that the <code>sosreport</code> utility created an archive meeting the following requirements:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Filename starts with <code>secured</code>.</p>
+</li>
+<li>
+<p>Filename ends with a <code>.gpg</code> extension.</p>
+</li>
+<li>
+<p>Located in the <code>/var/tmp/</code> directory.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo ls -l /var/tmp/sosreport</strong>*
+[sudo] password for user:
+-rw-------. 1 root root 18381537 Jan 24 17:55 <strong>/var/tmp/secured-sosreport-server1-12345678-2021-01-24-ueqijfm.tar.xz.gpg</strong></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Verify that you can decrypt the archive with the same passphrase you used to encrypt it.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Use the <code>gpg</code> command to decrypt the archive.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo gpg --output <em>decrypted-sosreport.tar.gz</em> --decrypt /var/tmp/secured-sosreport-server1-12345678-2021-01-24-ueqijfm.tar.xz.gpg</strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p>When prompted, enter the passphrase you used to encrypt the archive.</p>
+<div class="literalblock">
+<div class="content">
+<pre>┌──────────────────────────────────────────────────────┐
+│ Enter passphrase                                     │
+│                                                      │
+│                                                      │
+│ Passphrase: <strong><em>&lt;passphrase&gt;</em></strong>                             │
+│                                                      │
+│       &lt;OK&gt;                              &lt;Cancel&gt;     │
+└──────────────────────────────────────────────────────┘</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the <code>gpg</code> utility produced an unencrypted archive with a <code>.tar.gz</code> file extension.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo ls -l <em>decrypted-sosreport.tar.gz</em></strong>
+[sudo] password for user:
+-rw-r--r--. 1 root root <strong>18381537</strong> Jan 24 17:59 decrypted-sosreport.<strong>tar.gz</strong></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="#methods-for-providing-an-sos-report-to-red-hat-technical-support_generating-an-sosreport-for-technical-support">Methods for providing an <code>sos</code> report to Red Hat technical support</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc_generating-an-sos-report-and-securing-it-with-gpg-encryption-based-on-a-keypair_generating-an-sosreport-for-technical-support"><a class="anchor" href="#proc_generating-an-sos-report-and-securing-it-with-gpg-encryption-based-on-a-keypair_generating-an-sosreport-for-technical-support"></a>Generating an <code>sos</code> report and securing it with GPG encryption based on a keypair</h3>
+<div class="paragraph _abstract">
+<p>This procedure describes how to generate an <code>sos</code> report and secure it with GPG2 encryption based on a keypair from a GPG keyring. You might want to secure the contents of an <code>sos</code> report with this type of encryption if, for example, you want to protect an <code>sos</code> report stored on a server.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ensure you have sufficient space when creating an encrypted <code>sos</code> report, as it temporarily uses double the disk space:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>sosreport</code> utility creates an unencrypted <code>sos</code> report.</p>
+</li>
+<li>
+<p>The utility encrypts the <code>sos</code> report as a new file.</p>
+</li>
+<li>
+<p>The utility then removes the unencrypted archive.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the <code>sos</code> package.</p>
+</li>
+<li>
+<p>You need <code>root</code> privileges.</p>
+</li>
+<li>
+<p>You have created a GPG2 key.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Run the <code>sosreport</code> command and specify the user name that owns the GPG keyring with the <code>--encrypt-key</code> option.  With version 3.9 and later of the <code>sos</code> package, you can add the <code>--upload</code> option to transfer the <code>sos</code> report to Red Hat immediately after generating it.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The user running the <code>sosreport</code> command <strong>must</strong> be the same user that owns the GPG keyring used to encrypt and decrypt the <code>sos</code> report. If the user uses <code>sudo</code> to run the <code>sosreport</code> command, the keyring must also be set up using <code>sudo</code>, or the user must have direct shell access to that account.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo sosreport --encrypt-key <em>root</em></strong>
+[sudo] password for user:
+
+sosreport (version 3.9)
+
+This command will collect diagnostic and configuration information from
+this Red Hat Enterprise Linux system and installed applications.
+
+An archive containing the collected information will be generated in
+/var/tmp/sos.6ucjclgf and may be provided to a Red Hat support
+representative.
+
+...
+
+<strong>Press ENTER to continue, or CTRL-C to quit.</strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em>(Optional)</em> If you have already opened a Technical Support case with Red Hat, enter the case number to embed it in the <code>sos</code> report file name, and it will be uploaded to that case if you specified the <code>--upload</code> option. If you do not have a case number, leave this field blank. Entering a case number is optional and does not affect the operation of the <code>sosreport</code> utility.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Please enter the case id that you are generating this report for []: <strong><em>&lt;8-digit_case_number&gt;</em></strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Take note of the <code>sos</code> report file name displayed at the end of the console output.</p>
+<div class="literalblock">
+<div class="content">
+<pre>...
+Finished running plugins
+Creating compressed archive...
+
+Your sosreport has been generated and saved in:
+<strong>/var/tmp/secured-sosreport-server1-23456789-2021-01-27-zhdqhdi.tar.xz.gpg</strong>
+
+Size    <strong>15.44MiB</strong>
+Owner   <strong>root</strong>
+md5     <strong>ac62697e33f3271dbda92290583d1242</strong>
+
+Please send this file to your support representative.</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification steps</div>
+<ol class="arabic">
+<li>
+<p>Verify that the <code>sosreport</code> utility created an archive meeting the following requirements:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Filename starts with <code>secured</code>.</p>
+</li>
+<li>
+<p>Filename ends with a <code>.gpg</code> extension.</p>
+</li>
+<li>
+<p>Located in the <code>/var/tmp/</code> directory.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo ls -l /var/tmp/sosreport</strong>*
+[sudo] password for user:
+-rw-------. 1 root root 16190013 Jan 24 17:55 <strong>/var/tmp/secured-sosreport-server1-23456789-2021-01-27-zhdqhdi.tar.xz.gpg</strong></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Verify you can decrypt the archive with the same key you used to encrypt it.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Use the <code>gpg</code> command to decrypt the archive.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo gpg --output <em>decrypted-sosreport.tar.gz</em> --decrypt /var/tmp/secured-sosreport-server1-23456789-2021-01-27-zhdqhdi.tar.xz.gpg</strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p>When prompted, enter the passphrase you used when creating the GPG key.</p>
+<div class="literalblock">
+<div class="content">
+<pre>┌────────────────────────────────────────────────────────────────┐
+│ Please enter the passphrase to unlock the OpenPGP secret key:  │
+│ "GPG User (first key) &lt;root@example.com&gt;"                      │
+│ 2048-bit RSA key, ID BF28FFA302EF4557,                         │
+│ created 2020-01-13.                                            │
+│                                                                │
+│                                                                │
+│ Passphrase: <strong><em>&lt;passphrase&gt;</em></strong>                                       │
+│                                                                │
+│         &lt;OK&gt;                                    &lt;Cancel&gt;       │
+└────────────────────────────────────────────────────────────────┘</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the <code>gpg</code> utility produced an unencrypted archive with a <code>.tar.gz</code> file extension.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo ll <em>decrypted-sosreport.tar.gz</em></strong>
+[sudo] password for user:
+-rw-r--r--. 1 root root 16190013 Jan 27 17:47 decrypted-sosreport.<strong>tar.gz</strong></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="#methods-for-providing-an-sos-report-to-red-hat-technical-support_generating-an-sosreport-for-technical-support">Methods for providing an <code>sos</code> report to Red Hat technical support</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creating-gpg-key_generating-an-sosreport-for-technical-support"><a class="anchor" href="#creating-gpg-key_generating-an-sosreport-for-technical-support"></a>Creating a GPG2 key</h3>
+<div class="paragraph _abstract">
+<p>The following procedure describes how to generate a GPG2 key to use with encryption utilities.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You need <code>root</code> privileges.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Install and configure the <code>pinentry</code> utility.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[root@server ~]# <strong>dnf install pinentry</strong>
+[root@server ~]# <strong>mkdir ~/.gnupg -m 700</strong>
+[root@server ~]# <strong>echo "pinentry-program /usr/bin/pinentry-curses" &gt;&gt; ~/.gnupg/gpg-agent.conf</strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a <code>key-input</code> file used for generating a GPG keypair with your preferred details. For example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>[root@server ~]# cat &gt;key-input &lt;&lt;EOF
+%echo Generating a standard key
+Key-Type: <em>RSA</em>
+Key-Length: <em>2048</em>
+Name-Real: <em>GPG User</em>
+Name-Comment: <em>first key</em>
+Name-Email: <em>root@example.com</em>
+Expire-Date: <em>0</em>
+%commit
+%echo Finished creating standard key
+EOF</pre>
+</div>
+</div>
+</li>
+<li>
+<p><em>(Optional)</em> By default, GPG2 stores its keyring in the <code>~/.gnupg</code> file. To use a custom keyring location, set the <code>GNUPGHOME</code> environment variable to a directory that is only accessible by root.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[root@server ~]# <strong>export GNUPGHOME=<em>/root/backup</em></strong>
+
+[root@server ~]# <strong>mkdir -p $GNUPGHOME -m 700</strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Generate a new GPG2 key based on the contents of the <code>key-input</code> file.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[root@server ~]# <strong>gpg2 --batch --gen-key key-input</strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enter a passphrase to protect the GPG2 key. You use this passphrase to access the private key for decryption.</p>
+<div class="literalblock">
+<div class="content">
+<pre>┌──────────────────────────────────────────────────────┐
+│ Please enter the passphrase to                       │
+│ protect your new key                                 │
+│                                                      │
+│ Passphrase: <strong><em>&lt;passphrase&gt;</em></strong>                             │
+│                                                      │
+│	 &lt;OK&gt;                             &lt;Cancel&gt;     │
+└──────────────────────────────────────────────────────┘</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Confirm the correct passphrase by entering it again.</p>
+<div class="literalblock">
+<div class="content">
+<pre>┌──────────────────────────────────────────────────────┐
+│ Please re-enter this passphrase                      │
+│                                                      │
+│ Passphrase: <strong><em>&lt;passphrase&gt;</em></strong>                             │
+│                                                      │
+│	 &lt;OK&gt;                             &lt;Cancel&gt;     │
+└──────────────────────────────────────────────────────┘</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the new GPG2 key was created successfully.</p>
+<div class="literalblock">
+<div class="content">
+<pre>gpg: keybox '/root/backup/pubring.kbx' created
+gpg: Generating a standard key
+gpg: /root/backup/trustdb.gpg: trustdb created
+gpg: key BF28FFA302EF4557 marked as ultimately trusted
+gpg: directory '/root/backup/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/root/backup/openpgp-revocs.d/8F6FCF10C80359D5A05AED67BF28FFA302EF4557.rev'
+gpg: <strong>Finished creating standard key</strong></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification Steps</div>
+<ul>
+<li>
+<p>List the GPG keys on the server.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[root@server ~]# <strong>gpg2 --list-secret-keys</strong>
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+<em>/<strong>root</strong>/backup/pubring.kbx</em>
+------------------------
+sec   <em>rsa2048</em> 2020-01-13 [SCEA]
+      8F6FCF10C80359D5A05AED67BF28FFA302EF4557
+uid           [ultimate] <em>GPG User (first key) &lt;root@example.com&gt;</em></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For more information on GPG encryption and its uses, see the <a href="https://gnupg.org/">GNU Privacy Guard</a> website.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="generating-an-sos-report-from-the-rescue-environment_generating-an-sosreport-for-technical-support"><a class="anchor" href="#generating-an-sos-report-from-the-rescue-environment_generating-an-sosreport-for-technical-support"></a>Generating an <code>sos</code> report from the rescue environment</h3>
+<div class="paragraph _abstract">
+<p>If a Red Hat Enterprise Linux (RHEL) host does not boot properly, you can boot the host into a <em>rescue environment</em> to gather an <code>sos</code> report.</p>
+</div>
+<div class="paragraph">
+<p>Using the rescue environment, you can mount the target system under <code>/mnt/sysimage</code>, access its contents, and run the <code>sosreport</code> command.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>If the host is a bare metal server, you need physical access to the machine.</p>
+</li>
+<li>
+<p>If the host is a virtual machine, you need access to the virtual machine&#8217;s settings in the hypervisor.</p>
+</li>
+<li>
+<p>A RHEL installation source, such as an ISO image file, an installation DVD, a netboot CD, or a Preboot Execution Environment (PXE) configuration providing a RHEL installation tree.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Boot the host from an installation source.</p>
+</li>
+<li>
+<p>In the boot menu for the installation media, select the <code>Troubleshooting</code> option.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/sosreport-rescue-1.png" alt="Screenshot of the RHEL Anaconda Installer screen with the Troubleshooting option selected">
+</div>
+</div>
+</li>
+<li>
+<p>In the Troubleshooting menu, select the <code>Rescue a Red Hat Enterprise Linux system</code> option.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/sosreport-rescue-2.png" alt="Screenshot of the Troubleshooting screen with the Rescue option selected">
+</div>
+</div>
+</li>
+<li>
+<p>At the Rescue menu, select <code>1</code> and press the <kbd>Enter</kbd> key to continue and mount the system under the <code>/mnt/sysimage</code> directory.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/sosreport-rescue-3.png" alt="Screenshot of the Rescue screen prompting you to continue and mount the target host under /mnt/sysimage">
+</div>
+</div>
+</li>
+<li>
+<p>Press the <kbd>Enter</kbd> key to obtain a shell when prompted.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/sosreport-rescue-4.png" alt="Screenshot of the Rescue screen prompting you to press the Enter key to receive a rescue shell prompt">
+</div>
+</div>
+</li>
+<li>
+<p>Use the <code>chroot</code> command to change the apparent root directory of the rescue session to the <code>/mnt/sysimage</code> directory.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/sosreport-rescue-5.png" alt="Screenshot of the Rescue session after using the chroot command to change the apparent root directory to /mnt/sysimage">
+</div>
+</div>
+</li>
+<li>
+<p>Run the <code>sosreport</code> command and follow the on-screen instructions. With version 3.9 and later of the <code>sos</code> package, you can add the <code>--upload</code> option to transfer the <code>sos</code> report to Red Hat immediately after generating it.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/sosreport-rescue-6.png" alt="Screenshot of the sosreport utility prompting you to press the Enter key to continue running an sosreport">
+</div>
+</div>
+</li>
+<li>
+<p><em>(Optional)</em> If you have already opened a Technical Support case with Red Hat, enter the case number to embed it in the <code>sos</code> report file name, and it will be uploaded to that case if you specified the <code>--upload</code> option and your host is connected to the internet. If you do not have a case number, leave this field blank. Entering a case number is optional and does not affect the operation of the <code>sosreport</code> utility.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/sosreport-rescue-7.png" alt="Screenshot of the sosreport utility prompting you for an optional Red Hat Technical Support case number">
+</div>
+</div>
+</li>
+<li>
+<p>Take note of the <code>sos</code> report file name displayed at the end of the console output.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/sosreport-rescue-8.png" alt="Screenshot of the sosreport utility reporting the location of the resulting archive">
+</div>
+</div>
+</li>
+<li>
+<p>If your host does not have a connection to the internet, use a file transfer utility such as <code>scp</code> to transfer the <code>sos</code> report to another host on your network, then upload it to a Red Hat Technical Support case.</p>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification steps</div>
+<ul>
+<li>
+<p>Verify that the <code>sosreport</code> utility created an archive in the <code>/var/tmp/</code> directory.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/sosreport-rescue-9.png" alt="Screenshot of a terminal window displaying the results of a file listing of the /var/tmp/ directory">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>To download an ISO of the RHEL installation DVD, visit the downloads section of the Red Hat Customer Portal. See <a href="https://access.redhat.com/downloads">Product Downloads</a>.</p>
+</li>
+<li>
+<p><a href="#methods-for-providing-an-sos-report-to-red-hat-technical-support_generating-an-sosreport-for-technical-support">Methods for providing an <code>sos</code> report to Red Hat technical support</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="methods-for-providing-an-sos-report-to-red-hat-technical-support_generating-an-sosreport-for-technical-support"><a class="anchor" href="#methods-for-providing-an-sos-report-to-red-hat-technical-support_generating-an-sosreport-for-technical-support"></a>Methods for providing an <code>sos</code> report to Red Hat technical support</h3>
+<div class="paragraph _abstract">
+<p>You can use the following methods to upload your <code>sos</code> report to Red Hat Technical Support.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Upload with the <code>sosreport</code> command</dt>
+<dd>
+<p>With version 3.9 or later of the <code>sos</code> package, you can use the <code>--upload</code> option to transfer the <code>sos</code> report to Red Hat immediately after generating it.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you provide a case number when prompted, or use the <code>--case-id</code> or <code>--ticket-number</code> options, the <code>sosreport</code> utility uploads the <code>sos</code> report to your case after you authenticate with your Red Hat Customer Portal account.</p>
+</li>
+<li>
+<p>If you do not provide a case number or you do not authenticate, the utility uploads the <code>sos</code> report to the Red Hat public FTP site. Provide Red Hat Technical Support Engineers with the name of the <code>sos</code> report archive so they can access it.</p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>sudo sosreport --upload</strong>
+[sudo] password for user:
+
+sosreport (<strong>version 3.9</strong>)
+
+This command will collect diagnostic and configuration information from
+this Red Hat Enterprise Linux system and installed applications.
+...
+
+Please enter the case id that you are generating this report for []: <strong><em>&lt;8-digit_case_number&gt;</em></strong>
+Enter your Red Hat Customer Portal username (empty to use public dropbox): <strong><em>&lt;Red_Hat_Customer_Portal_ID&gt;</em></strong>
+Please provide the upload password for <em>&lt;user@domain.com&gt;</em>:
+...
+
+Attempting upload to Red Hat Customer Portal
+<strong>Uploaded archive successfully</strong></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Upload files via the Red Hat Customer Portal</dt>
+<dd>
+<p>Using your Red Hat user account, you can log into the <code>Support Cases</code> section of the Red Hat Customer Portal website and upload an <code>sos</code> report to a technical support case.</p>
+<div class="paragraph">
+<p>To log in, visit <a href="https://access.redhat.com/support/cases">Support Cases</a>.</p>
+</div>
+</dd>
+<dt class="hdlist1">Upload files using the Red Hat Support Tool</dt>
+<dd>
+<p>With the Red Hat Support Tool, you can upload a file directly from the command line to a Red Hat technical support case. The case number is required.</p>
+<div class="literalblock">
+<div class="content">
+<pre>[user@server1 ~]$ <strong>redhat-support-tool addattachment -c <em>&lt;8-digit_case_number&gt;</em> <em>&lt;/var/tmp/sosreport_filename&gt;</em></strong></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For additional methods on how to provide Red Hat Technical Support with your <code>sos</code> report, such as FTP and <code>curl</code>, see the Red Hat Knowledgebase article <a href="https://access.redhat.com/solutions/2112">How to provide files to Red Hat Support (vmcore, rhev logcollector, sosreports, heap dumps, log files, etc.)</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
